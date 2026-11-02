@@ -4,12 +4,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="#13223b" name="theme-color"/>
+<meta content="#10243b" name="theme-color"/>
 <meta content="Eng Dan Otieno — ICT Expert" name="author"/>
-<meta content="KUSU public university staff salary, arrears and indicative net pay estimator, grades 5–15. Includes promotions, departure date, diagonal increment progression and allowances. Independent demo." name="description"/>
+<meta content="Simple independent KUSU 2025–2029 CBA pay calculator for Grades 5–15. Estimate basic pay, monthly allowances, arrears and compare with your payslip. No signup." name="description"/>
 <meta content="2025–2029 CBA Pay Estimator | Independent Demo" property="og:title"/>
 <meta content="Check Grades 5–15, 12 notches, annual increments and estimated salary arrears. Unofficial demonstration only." property="og:description"/>
-<title>KUSU PayLens Pro | CBA Salary, Allowances &amp; Arrears — Independent Demo</title>
+<title>KUSU PayLens | Easy CBA Pay Calculator, Payslip &amp; Arrears (Unofficial Demo)</title>
 <style>:root{--navy:#13243d;--navy2:#0e1b2f;--ink:#192b41;--muted:#68788a;--line:#e2e8ec;--canvas:#f5f7f8;--paper:#fff;--gold:#d4ad71;--goldlight:#f8efdf;--green:#18765f;--greenlight:#eaf4f0;--shadow:0 24px 64px rgba(13,31,51,.07)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:96px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--canvas);font-size:15px;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #d4ad71;outline-offset:3px}a{color:inherit;text-decoration:none}a:hover{text-decoration:none}p{line-height:1.7}.wrap{width:min(1200px,calc(100% - 48px));margin:auto}.skip-link{position:absolute;top:-100px;left:10px;background:white;padding:12px;z-index:100}.skip-link:focus{top:10px}
 .notice{background:#10213a;color:#dfe5ee;font-size:12px;line-height:1.65;letter-spacing:.012em}.notice-inner{padding:9px 0}.notice strong{color:#e9c98e}.site-header{background:#fff;border-bottom:1px solid #e9edf0;position:sticky;top:0;z-index:10}.header-inner{height:79px;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{display:flex;gap:12px;align-items:center}.brand-mark{width:40px;height:40px;flex:none}.brand span{display:flex;flex-direction:column;gap:2px}.brand strong{letter-spacing:-.45px;font-size:18px;font-weight:800}.brand small{color:#81909d;font-size:11px;letter-spacing:.015em}.desktop-nav{display:flex;gap:30px;font-size:13px;color:#4d6278;font-weight:650}.desktop-nav a:hover{color:var(--green)}.nav-cta{background:var(--navy);color:white;font-size:12px;font-weight:700;letter-spacing:.025em;padding:12px 19px;border-radius:8px;white-space:nowrap}.nav-cta:hover,.primary-button:hover{background:#25446a}.nav-cta span{margin-left:10px}
@@ -147,7 +147,130 @@ body{background:radial-gradient(circle at 12% 15%,#e9edff 0,transparent 28%),rad
 @media(max-width:480px){.tracker-grid{grid-template-columns:1fr}.quick-payslip-actions button{flex:1 1 65px}.recon-metric{padding:12px}.recon-metric strong{font-size:19px}.tracker-totals strong{font-size:18px}}
 @media print{body{background:white!important;padding:0!important}body>.skip-link,body>.notice,body>.site-header,body>main,body>.site-footer,body>.mobile-dock,body>script{display:none!important}body>#print-report{display:block!important;color:#1d2647;font-family:Arial,sans-serif;max-width:720px;margin:0 auto;padding:10px 18px}.print-report *{box-shadow:none!important}.print-report{break-inside:auto}.print-metrics tr{break-inside:avoid}}
 </style>
-<meta name="application-name" content="KUSU PayLens Pro"/><meta name="apple-mobile-web-app-capable" content="yes"/><link rel="manifest" href="./manifest.webmanifest"/><link rel="icon" href="./icon.svg" type="image/svg+xml"/></head>
+<meta content="KUSU PayLens Pro" name="application-name"/><meta content="yes" name="apple-mobile-web-app-capable"/><link href="./manifest.webmanifest" rel="manifest"/><link href="./icon.svg" rel="icon" type="image/svg+xml"/><style>/* PayLens v3: ease of use, readable interaction, strong hierarchy. No external CSS. */
+:root{--navy:#122a46;--navy2:#102036;--ink:#18324f;--muted:#546981;--green:#067e75;--greenlight:#e9f9f4;--line:#dee7f1;--canvas:#f5f8fd;--gold:#fcbf73;--paper:#fff;--shadow:0 18px 48px rgba(26,53,105,.075)}
+body{font-size:15px;background:var(--canvas);color:var(--ink)}
+.wrap{width:min(1240px,calc(100% - 52px))}
+a,button,select,input,summary{-webkit-tap-highlight-color:transparent}
+button,select,input{min-height:44px}
+:focus-visible{outline:3px solid #ff9c33!important;outline-offset:3px!important}
+.notice{background:#fff4e6!important;color:#653916!important;border-bottom:2px solid #ffc46c!important;font-size:12px}
+.notice-inner{display:flex;align-items:center;gap:24px;padding:13px 0!important}
+.notice-head{flex:0 0 292px!important}
+.notice-title{color:#843e15!important;font-size:18px!important}
+.notice-overline{color:#ad541e!important}
+.notice-symbol{background:#ff923a!important;color:#fff!important}
+.notice-copy{margin:0!important;line-height:1.6!important;color:#6c4c31!important;font-size:12px!important}
+.notice-copy strong{color:#91451d!important}
+.site-header{border-bottom:1px solid #dfe6f1;box-shadow:0 1px 12px rgba(17,33,64,.035)}
+.header-inner{height:69px!important;gap:20px}
+.brand strong{font-size:18px!important;color:#152b55}.brand small{color:#63798b!important}
+.desktop-nav{gap:19px!important;font-size:13px!important}
+.desktop-nav a{padding:11px 3px;border-bottom:3px solid transparent;white-space:nowrap}
+.desktop-nav a:hover,.desktop-nav a[aria-current="location"]{color:#147c79!important;border-bottom-color:#16b5a4}
+.nav-cta,.primary-button,.quick-calc-button{background:linear-gradient(105deg,#6152d9,#4169e9);color:white!important;border:0;border-radius:13px;box-shadow:0 9px 23px rgba(77,78,209,.22);font-size:14px;font-weight:790}
+.nav-cta{padding:12px 17px!important}
+.nav-cta:hover,.primary-button:hover,.quick-calc-button:hover{background:linear-gradient(105deg,#4b3cbc,#315cd3)!important;transform:translateY(-1px)}
+.hero{background:linear-gradient(115deg,#10223e 0%,#22204b 62%,#1d4389 100%)!important;color:#fff;min-height:0}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 20%,rgba(115,99,241,.17),transparent 53%),radial-gradient(ellipse at 18% 100%,rgba(0,228,180,.08),transparent 50%);pointer-events:none}
+.hero-grid{grid-template-columns:1.2fr .8fr!important;gap:60px!important;padding:46px 0 46px!important;position:relative;z-index:1}
+.hero h1{color:#fff!important;font-size:clamp(36px,4vw,55px)!important;line-height:1.07!important;margin:12px 0 13px!important;letter-spacing:-.06em!important}
+.hero h1 em{color:#71ead0!important}
+.hero-lead{color:#d8dff1!important;font-size:15px!important;line-height:1.65!important;margin:0 0 18px!important;max-width:575px}
+.hero .eyebrow{color:#b9e9de!important;font-size:10px}.hero .eyebrow-dot{background:#69e6c8}
+.hero-actions{gap:18px!important}.hero-actions .primary-button{padding:14px 21px}
+.hero .secondary-link{color:#f5f6ff!important}
+.hero-foot{margin-top:16px!important;color:#e0e9f8!important;gap:16px!important;font-size:11px!important}
+.small-check{color:#7af5cc}
+.hero-art{height:auto!important;min-height:225px!important;display:block!important;background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.055))!important;border:1px solid rgba(209,228,255,.19)!important;padding:21px!important;box-shadow:0 17px 35px rgba(0,0,0,.11)!important;backdrop-filter:blur(6px)}
+.hero-art:before{width:260px;height:260px;top:-130px;right:-130px}
+.hero-art-label{font-size:10px;letter-spacing:.18em;font-weight:800;color:#d4e6ff;margin-bottom:9px}
+.hero-art-inner{display:grid;gap:8px}
+.hero-step{background:rgba(255,255,255,.07);border-radius:12px;padding:9px 12px;display:flex;gap:13px;align-items:center;border:1px solid rgba(255,255,255,.07)}
+.hero-step>span{display:grid;place-items:center;border-radius:9px;width:36px;height:36px;flex:none;background:#72f0d4;color:#10233f;font-size:12px;font-weight:900}
+.hero-step strong{display:block;color:white;font-size:13px}.hero-step small{display:block;color:#c7d4ea;font-size:10px;margin-top:2px}
+.hero-art-bottom{color:#cbd4e9;font-size:10px;margin-top:14px;letter-spacing:.05em}.hero-art-bottom b{color:#70e9d1;padding:0 5px}
+.section{padding-top:50px!important}
+.section-intro{margin-bottom:19px!important;align-items:center!important}
+.section-intro h2{font-size:clamp(26px,2.9vw,38px)!important;margin:7px 0!important}
+.section-intro p{font-size:13px!important;line-height:1.5}
+.section-intro .overline{font-size:10px;color:#1d8a81;display:flex;align-items:center;gap:9px}
+.number-chip{background:#dff7ef;color:#097465;border:1px solid #b2e8d9;display:grid;place-items:center;width:24px;height:24px;border-radius:9px;font-size:12px;letter-spacing:0}
+.help-link{font-weight:760;font-size:12px;color:#4859ae;white-space:nowrap;display:inline-flex;gap:8px;background:#fff;border:1px solid var(--line);padding:11px 13px;border-radius:10px}
+.help-link:hover{background:#eef5ff}
+.calculator-grid{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;gap:19px!important;align-items:start!important}
+.input-panel,.result-panel,.premium-dashboard,.tracker-panel,.recon-panel,.math-panel,.timeline-panel,.schedule-box{border-radius:20px!important;border-color:#dbe4f0!important;box-shadow:0 12px 35px rgba(29,45,93,.055)!important}
+.input-panel{padding:24px!important;overflow:hidden}
+.panel-heading{margin-bottom:17px!important}.panel-heading h3{font-size:21px!important}.panel-heading p{font-size:12px!important;line-height:1.5}
+.panel-icon{background:linear-gradient(130deg,#18a899,#086f91)!important;border-radius:13px!important}
+.field-grid{gap:14px!important}
+.field>span{font-size:12px!important;font-weight:800!important;color:#314a6d!important}
+.field input,.field select{background:#f8fbff!important;border:1.5px solid #d7e2ee!important;border-radius:12px!important;padding:12px!important;min-height:47px;box-shadow:inset 0 1px 2px rgba(0,0,0,.02)}
+.field input:focus,.field select:focus{border-color:#6a63df!important;box-shadow:0 0 0 3px rgba(110,99,220,.12)!important}
+.quick-action-bar{display:flex;gap:11px;align-items:center;margin:17px 0 15px;flex-wrap:wrap}
+.quick-calc-button{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 18px;font-size:14px;min-height:48px;flex:1;min-width:230px}
+.live-hint{font-size:11px;color:#5b718a;display:flex;align-items:center;gap:6px}.live-pulse{width:7px;height:7px;border-radius:50%;background:#23b49d;box-shadow:0 0 0 4px #dff9f2}
+.quick-samples{margin:9px 0 13px;background:#f4f7ff;border-radius:12px;border:1px solid #e3e8fa}
+.quick-samples summary{padding:12px 14px;font-size:12px;font-weight:750;color:#395179;display:flex;justify-content:space-between;cursor:pointer}
+.quick-samples[open] summary{border-bottom:1px solid #e3e8fa}
+.quick-samples .example-chooser{margin:0!important;background:transparent!important;border:0!important;padding:13px!important}
+.example-buttons button{min-height:38px!important}
+.friendly-tip{display:flex!important;align-items:flex-start;gap:9px;background:#effbf6!important;border:1px solid #d1f1e6!important;border-radius:12px!important;padding:12px 13px!important;color:#2d6259!important;font-size:12px!important;margin:12px 0!important;line-height:1.5}
+.friendly-tip strong{color:#19574c!important}
+.progressive-block{border:1px solid #e0e8f2!important;border-radius:12px!important;background:#fff!important;margin:8px 0!important}
+.progressive-block summary{min-height:55px!important;padding:12px 14px!important}
+.progressive-block summary strong{font-size:13px!important;color:#304768!important}
+.progressive-block summary small{font-size:11px!important;color:#71839c!important}
+.payslip-reveal summary{background:#fff9ef;border-radius:12px}
+.payslip-reveal[open] summary{border-radius:12px 12px 0 0}
+.payslip-reveal .quick-payslip{margin:0!important;border:0!important;background:#fff!important;padding:7px 0 0!important}
+.payslip-reveal .progressive-body{padding:14px}
+.input-panel .form-actions{margin-top:15px!important}
+.result-panel{position:sticky;top:85px;background:linear-gradient(140deg,#1c2455,#112443 75%)!important;border:1px solid #303b76!important;padding:26px!important}
+.result-status{display:flex;gap:7px;align-items:center;color:#a3efe2;font-size:11px;font-weight:660;margin-bottom:17px}
+.status-spark{width:7px;height:7px;border-radius:50%;background:#61f1c4;box-shadow:0 0 0 4px rgba(81,216,177,.11)}
+.result-label{margin:20px 0 2px!important;font-size:13px!important}
+.big-money{font-size:clamp(33px,3vw,49px)!important;color:#fff!important;line-height:1.18!important;font-variant-numeric:tabular-nums}
+.result-kicker{color:#b7d2fd!important}
+.result-sub{color:#c7d5e8!important;font-size:11px!important}
+.result-period{color:#fff!important}
+.result-demo{background:rgba(255,201,119,.09)!important;border-color:rgba(255,189,98,.38)!important}
+.result-demo strong{color:#ffe2a6!important}
+.result-context{background:rgba(131,238,214,.085);border:1px solid rgba(118,234,210,.24);border-radius:12px;padding:13px 15px;margin:14px 0;color:#e2f7ff}
+.result-context strong{font-size:12px}.result-context p{font-size:11px;line-height:1.5;margin:5px 0 9px;color:#d0e2f0}
+.result-context-actions{display:flex;gap:13px;flex-wrap:wrap}.result-context-actions a{color:#8ef4db;font-size:11px;font-weight:800;text-decoration:underline;text-underline-offset:2px}
+.result-actions{display:flex!important;gap:9px!important;flex-wrap:wrap!important}
+.result-actions button{min-height:42px;border-radius:11px!important}
+.result-net{border-radius:12px}
+#insights{margin-top:21px!important;scroll-margin-top:85px}
+.premium-dashboard{background:linear-gradient(142deg,#fff,#f9fbff)!important;border:1px solid #dce4f3!important;padding:24px!important}
+.premium-dashboard-top h3{font-size:26px!important;color:#192d60!important}
+.premium-dashboard-top p{font-size:12px!important;line-height:1.55}
+.premium-kpis{gap:13px!important}
+.premium-kpi{border-radius:16px!important;box-shadow:0 8px 18px rgba(46,42,115,.07)}
+.premium-kpi strong{font-size:clamp(23px,2.5vw,32px)!important;white-space:normal!important;overflow-wrap:anywhere}
+.viz-panel{border-radius:16px!important}
+.dashboard-bottom{font-size:12px!important}
+#reconciliation,#arrears-tracker,#timeline,#explain-my-numbers{scroll-margin-top:100px}
+.tracker-panel,.recon-panel,.timeline-panel,.math-panel{margin-top:20px!important}
+.tracker-panel h3,.recon-panel h3{font-size:24px!important}
+#how-it-works .section-intro,#schedule .section-intro{margin-top:5px}
+.sources-links{flex-wrap:wrap!important}.source-pdf{background:#dcf9f0!important;border:1px solid #a9e7d8!important;color:#096851!important;font-weight:800!important}
+.inline-source-link{color:#0f77a2!important;text-decoration:underline;font-weight:800}
+.bottom-cta{background:linear-gradient(120deg,#16294c,#29225c)!important}
+.bottom-inner{gap:30px!important}.bottom-inner h2{font-size:clamp(27px,3vw,38px)!important}.bottom-buttons{display:flex;gap:11px;flex-wrap:wrap;align-items:center}.source-link-button{border:1px solid rgba(255,255,255,.55);padding:13px 17px;border-radius:11px;font-weight:700;color:white;font-size:12px}
+.site-footer{background:#0e1c33!important}.footer-note strong{color:#ffd591!important}
+.mobile-dock a{min-height:60px}
+@media (max-width: 1050px){.desktop-nav{gap:13px!important}.desktop-nav a{font-size:12px!important}.nav-cta{font-size:12px!important}.header-demo{display:none!important}.hero-grid{gap:25px!important}.notice-head{flex-basis:250px!important}}
+@media (max-width: 900px){.desktop-nav{display:none!important}.hero-grid{grid-template-columns:1fr .88fr!important}.calculator-grid{grid-template-columns:1fr!important}.result-panel{position:relative!important;top:0!important}.premium-kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media (max-width: 700px){.wrap{width:min(100% - 28px,1240px)!important}.notice-inner{display:block!important;padding:12px 0!important}.notice-head{margin-bottom:7px!important}.notice-title{font-size:16px!important}.notice-copy{font-size:11px!important}.header-inner{height:61px!important}.brand strong{font-size:16px!important}.brand small{font-size:10px!important}.brand-mark{width:36px!important;height:36px!important}.nav-cta{padding:11px 12px!important;font-size:11px!important}.nav-cta span{display:none}.hero-grid{display:block!important;padding:30px 0!important}.hero h1{font-size:39px!important;margin:10px 0 10px!important}.hero-lead{font-size:14px!important;line-height:1.55!important}.hero-art{display:none!important}.hero-foot{gap:10px!important;margin-top:13px!important}.hero-actions .primary-button{min-height:48px;font-size:13px}.section{padding-top:31px!important}.section-intro{display:block!important}.help-link{margin-top:10px;font-size:11px}.calculator-grid{gap:12px!important}.input-panel{padding:17px!important}.input-panel .field-grid.two-up{grid-template-columns:1fr 1fr!important;gap:12px!important}.input-panel .field>span{font-size:11px!important}.field input,.field select{font-size:13px!important;padding:10px 8px!important;min-height:46px}.quick-action-bar{display:block;margin:14px 0 11px}.quick-calc-button{min-width:0;width:100%}.live-hint{justify-content:center;margin-top:8px}.result-panel{padding:20px!important}.big-money{font-size:clamp(32px,8.3vw,42px)!important}.premium-dashboard{padding:15px!important}.premium-dashboard-top h3{font-size:24px!important}.premium-dashboard .premium-kpis{grid-template-columns:1fr 1fr!important;gap:9px!important}.premium-kpi{padding:13px!important}.premium-kpi strong{font-size:21px!important}.premium-visual-row{grid-template-columns:1fr!important}.section-intro h2{font-size:30px!important}.result-actions button{flex:1 1 125px!important}.bottom-inner{display:block!important}.bottom-buttons{margin-top:17px}.site-footer{padding-bottom:80px!important}}
+@media (max-width:380px){.brand small{max-width:170px;overflow:hidden;white-space:nowrap}.nav-cta{display:none!important}.input-panel .field-grid.two-up{grid-template-columns:1fr!important}.hero h1{font-size:34px!important}.premium-dashboard .premium-kpis{grid-template-columns:1fr!important}.result-actions{display:grid!important;grid-template-columns:1fr 1fr}.result-actions button{font-size:11px!important}.footer-last{display:block!important}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+@media print{.notice,.site-header,.mobile-dock,.hero,.bottom-cta,.quick-calc-button{display:none!important}}
+
+/* First-screen compactness for phones; disclaimers remain fully readable. */
+@media(max-width:700px){.hero-grid{padding:21px 0 24px!important}.hero h1{font-size:36px!important}.hero .eyebrow{font-size:9px!important}.hero-lead{margin-bottom:13px!important}.hero-foot{margin-top:10px!important}.section{padding-top:25px!important}.section-intro h2{font-size:27px!important}.section-intro p{font-size:12px!important}.help-link{margin-top:7px;padding:9px 11px}.section-intro{margin-bottom:13px!important}}
+</style></head>
 <body>
 <a class="skip-link" href="#estimator">Skip to estimator</a>
 <aside aria-label="Important unofficial estimate disclaimer" class="notice" role="note">
@@ -162,86 +285,45 @@ body{background:radial-gradient(circle at 12% 15%,#e9edff 0,transparent 28%),rad
 <svg aria-hidden="true" class="brand-mark" fill="none" viewbox="0 0 40 40"><rect fill="#D5B16E" height="40" rx="12" width="40"></rect><path d="M9 29.5L19.5 19L25 24.5L33 16.5" stroke="#102039" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path><path d="M28 16.5H33V21.5" stroke="#102039" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path><path d="M9 11H23" stroke="#102039" stroke-linecap="round" stroke-width="2.6"></path></svg>
 <span><strong>KUSU PayLens <span class="pro-word">PRO</span></strong><small>2025–2029 CBA · independent demo</small></span>
 </a>
-<nav aria-label="Main navigation" class="desktop-nav"><a href="#estimator">Calculator</a><a href="#insights">Dashboard</a><a href="#schedule">Salary schedule</a><a href="#how-it-works">How it works</a><a href="#arrears-tracker">Payment tracker</a></nav>
+<nav aria-label="Main navigation" class="desktop-nav"><a href="#estimator">Calculator</a><a href="#insights">My dashboard</a><a href="#reconciliation">Payslip check</a><a href="#arrears-tracker">Arrears</a><a href="#schedule">Salary table</a></nav>
 <span class="header-demo" title="Unofficial demonstration — not an endorsed payroll tool">DEMO · UNOFFICIAL</span>
-<a class="nav-cta" href="#estimator">Start estimating <span aria-hidden="true">↗</span></a>
+<a class="nav-cta" href="#estimator">Calculate now <span aria-hidden="true">→</span></a>
 </div>
 </header>
 <main id="top">
-<section class="hero">
-<div class="wrap hero-grid">
-<div class="hero-copy">
-<div class="eyebrow"><span class="eyebrow-dot"></span> INDEPENDENT CBA PAY DEMONSTRATION</div>
-<h1>Understand your CBA.<br/><em>Know what to check.</em></h1>
-<p class="hero-lead">A friendly way to explore your expected basic pay, allowances and possible arrears. Select your grade and notch; the dashboard does the rest. The figures are estimates, not official payroll.</p>
-<div class="hero-actions"><a class="primary-button" href="#estimator">Check my estimated pay <span aria-hidden="true">↗</span></a><a class="secondary-link" href="#how-it-works">See the method <span aria-hidden="true">→</span></a></div>
-<div class="hero-foot"><span><span class="small-check">✓</span> 11 salary grades</span><span><span class="small-check">✓</span> 12 notches each</span><span><span class="small-check">✓</span> Local, private calculations</span></div>
-</div>
-<div aria-label="Illustration of upward diagonal salary steps" class="hero-art">
-<div class="art-top"><span>HOW PROGRESSION WORKS</span><span class="art-period">2025 → 2029</span></div>
-<div aria-hidden="true" class="stairs"><div class="step s1"><span>01</span></div><div class="step s2"><span>02</span></div><div class="step s3"><span>03</span></div><div class="step s4"><span>04</span></div><div class="step s5"><span>05</span></div><svg preserveaspectratio="none" viewbox="0 0 420 215"><path d="M18 180 L101 157 L183 125 L268 79 L384 35" fill="none" stroke="#E1BE7D" stroke-dasharray="3 9" stroke-linecap="round" stroke-width="3"></path><circle cx="384" cy="35" fill="#F1CD8D" r="6"></circle></svg></div>
-<div class="art-bottom"><div><strong>5%</strong><span>Annual notch movement*</span></div><div class="art-line"></div><div><strong>3.5%</strong><span>July salary-rate revision*</span></div></div>
-<div class="art-disclaimer">*Illustrates the schedule structure; exact amounts follow published tables.</div>
-</div>
-</div>
-</section>
-<div class="metric-strip"><div class="wrap strip-content"><span><strong>2025–2029</strong><small>CBA period</small></span><span><strong>Grades 5–15</strong><small>Included staff grades</small></span><span><strong>KSh 18,000</strong><small>Commuter target / month†</small></span><span><strong>12 months + 6 months</strong><small>Arrears periods</small></span></div></div>
+<section aria-labelledby="hero-title" class="hero"><div class="wrap hero-grid">
+<div class="hero-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> MADE FOR KUSU MEMBERS · INDEPENDENT DEMO</div>
+<h1 id="hero-title">Your CBA pay, <em>made simple.</em></h1>
+<p class="hero-lead">Choose your grade and notch. See an estimated new salary in seconds, then compare it with your payslip and track possible arrears.</p>
+<div class="hero-actions"><a class="primary-button" href="#estimator">Calculate my pay <span aria-hidden="true">→</span></a><a class="secondary-link" href="#how-it-works">How does it work? <span aria-hidden="true">↗</span></a></div>
+<div class="hero-foot"><span><span class="small-check">✓</span> No signup</span><span><span class="small-check">✓</span> Private calculations</span><span><span class="small-check">✓</span> Easy to check</span></div></div>
+<div aria-label="Three simple steps to estimate your salary" class="hero-art"><div class="hero-art-label">THE SIMPLE WAY</div>
+<div class="hero-art-inner"><div class="hero-step"><span>01</span><div><strong>Select grade &amp; notch</strong><small>From your HR records or payslip</small></div></div>
+<div class="hero-step"><span>02</span><div><strong>See your estimate</strong><small>Basic pay, allowances &amp; progression</small></div></div>
+<div class="hero-step"><span>03</span><div><strong>Check your payslip</strong><small>Track differences and payments</small></div></div></div>
+<div class="hero-art-bottom">2025–2029 CBA <b>·</b> Grades 5–15 <b>·</b> 12 notches</div></div>
+</div></section>
 
-<div class="journey-bar" aria-label="How to use the estimator">
-  <a href="#estimator"><span class="journey-num">01</span><span><strong>Tell us your grade</strong><small>Start with four details</small></span><span class="journey-arr">↗</span></a>
-  <a href="#insights"><span class="journey-num">02</span><span><strong>Explore your dashboard</strong><small>Pay, arrears & allowances</small></span><span class="journey-arr">↗</span></a>
-  <a href="#timeline"><span class="journey-num">03</span><span><strong>Check your payslip</strong><small>Verify month by month</small></span><span class="journey-arr">↗</span></a>
-</div>
 
 <section class="section estimator-section" id="estimator">
 <div class="wrap">
-<div class="section-intro"><div><div class="overline">THE ESTIMATOR</div><h2>Let’s make sense of your pay.</h2><p>Start with four quick details. Your personal dashboard responds instantly; fine-tune the assumptions as you go.</p></div><span class="section-count">01 / 03</span></div>
-
-<section class="premium-dashboard" id="insights" aria-label="Live CBA pay dashboard">
-  <div class="premium-dashboard-top">
-    <div><span class="dash-overline"><span class="dash-spark"></span> LIVE PERSONAL DASHBOARD</span><h3>Your pay at a glance <span aria-hidden="true">✦</span></h3><p>Your figures update immediately as you adjust the calculator. <strong>They are estimates, not a confirmed entitlement.</strong></p></div>
-    <span class="dashboard-period" id="dash-period">November 2026 · Demo</span>
-  </div>
-  <div class="premium-kpis">
-    <article class="premium-kpi kpi-gross"><div class="kpi-top"><span>Monthly gross estimate</span><span class="kpi-symbol" aria-hidden="true">↗</span></div><strong id="dash-gross">KSh —</strong><small>Basic + selected monthly allowances</small><div class="kpi-decor" aria-hidden="true"></div></article>
-    <article class="premium-kpi kpi-basic"><div class="kpi-top"><span>Scheduled basic pay</span><span class="kpi-symbol" aria-hidden="true">◈</span></div><strong id="dash-basic">KSh —</strong><small id="dash-grade">Grade 8 · Notch 1</small><div class="kpi-decor" aria-hidden="true"></div></article>
-    <article class="premium-kpi kpi-arrears"><div class="kpi-top"><span>Potential basic arrears balance</span><span class="kpi-symbol" aria-hidden="true">⌁</span></div><strong id="dash-arrears">KSh —</strong><small>Scenario only · depends on actual payments</small><div class="kpi-decor" aria-hidden="true"></div></article>
-    <article class="premium-kpi kpi-leave"><div class="kpi-top"><span>Annual leave allowance</span><span class="kpi-symbol" aria-hidden="true">✳</span></div><strong id="dash-leave">KSh —</strong><small>Once yearly · excluded from monthly gross</small><div class="kpi-decor" aria-hidden="true"></div></article>
-  </div>
-  <div class="premium-visual-row">
-    <article class="viz-panel"><div class="viz-head"><div><span class="overline">YOUR BASIC-SALARY GAIN</span><h4>Before vs scheduled pay</h4></div><span class="viz-pill">Same grade & notch</span></div>
-      <div class="bar-compare">
-        <div class="bar-row"><div class="bar-meta"><span>2024/25 reference</span><b id="dash-reference">KSh —</b></div><div class="bar-track"><span class="bar-fill ref" id="dash-ref-bar"></span></div></div>
-        <div class="bar-row"><div class="bar-meta"><span>Selected CBA year</span><b id="dash-new">KSh —</b></div><div class="bar-track"><span class="bar-fill new" id="dash-new-bar"></span></div></div>
-      </div><div class="compare-bottom"><span class="compare-symbol">↗</span><div><strong id="dash-gain">KSh — more / month</strong><small>Compared with the 2024/25 reference at this notch; this is not necessarily the increase on your payslip.</small></div></div>
-    </article>
-    <article class="viz-panel composition"><div class="viz-head"><div><span class="overline">YOUR MONTHLY MIX</span><h4>What makes up gross pay?</h4></div></div>
-      <div class="mix-layout"><div class="mix-ring" id="dash-ring" role="img" aria-label="Basic salary and selected allowance share of gross pay"><div class="mix-hole"><small>Gross</small><strong id="dash-ring-total">KSh —</strong></div></div><div class="mix-legend">
-        <div><span class="mix-dot mix-dot-basic"></span><span>Basic salary</span><strong id="dash-mix-basic">—</strong></div>
-        <div><span class="mix-dot mix-dot-commuter"></span><span>Assumed commuter</span><strong id="dash-mix-commuter">—</strong></div>
-        <div><span class="mix-dot mix-dot-other"></span><span>House + other</span><strong id="dash-mix-other">—</strong></div>
-      </div></div>
-      <p class="mix-note">The KSh 18,000 commuter figure is a <strong>target rate</strong> and may be phased at your university. Adjust it below.</p>
-    </article>
-  </div>
-  <div class="dashboard-bottom"><span class="green-pulse"></span> Everything is calculated locally in your browser. No account, tracking or automatic server submission. <a href="#estimator">Adjust my inputs ↗</a></div>
-</section>
+<div class="section-intro"><div><div class="overline"><span class="number-chip">1</span> START HERE · ABOUT 30 SECONDS</div><h2>Let's calculate your pay.</h2><p>Only four details are needed. The result updates automatically as you choose.</p></div><a class="help-link" href="#how-it-works">Not sure where to start? <span aria-hidden="true">↗</span></a></div>
 
 <div class="calculator-grid">
 <form autocomplete="off" class="input-panel" id="estimator-form">
-<div class="panel-heading"><span class="panel-icon">01</span><div><h3>Start here</h3><p>Four details to get your first estimate. No sign-up, no uploading payslips. All calculations stay on your device.</p></div></div>
+<div class="panel-heading"><span class="panel-icon">1</span><div><h3>Tell us about your grade</h3><p>No account. No upload. Your entered figures stay on this device.</p></div></div>
 <div class="field-grid two-up">
 <label class="field"><span>Staff grade <i title="KUSU grades 5 through 15">ⓘ</i></span><select id="grade" name="grade"></select></label>
-<label class="field"><span>Notch on 30 Jun 2025 <i title="This is your starting notch, before any July 2025 increment">ⓘ</i></span><select id="notch" name="notch"></select></label>
-<label class="field"><span>Annual increment month</span><select id="incrementMonth" name="incrementMonth"></select></label>
-<label class="field"><span>Pay month to estimate</span><input id="estimateMonth" max="2029-06" min="2025-07" name="estimateMonth" required="" type="month" value="2026-11"/></label>
-</div>
-<div class="example-chooser"><div class="example-title"><strong>Try a grade example</strong><span>Quick preview only — always select your own grade & notch</span></div><div class="example-buttons" aria-label="Example grade shortcuts"><button type="button" data-example-grade="5">Grade 5</button><button type="button" data-example-grade="8">Grade 8</button><button type="button" data-example-grade="11">Grade 11</button><button type="button" data-example-grade="15">Grade 15</button></div></div>
-<div class="quick-payslip" id="quick-payslip">
+<label class="field"><span>Starting notch · 30 June 2025</span><select id="notch" name="notch"></select></label>
+<label class="field"><span>Your annual increment month</span><select id="incrementMonth" name="incrementMonth"></select></label>
+<label class="field"><span>Month you want to check</span><input id="estimateMonth" max="2029-06" min="2025-07" name="estimateMonth" required="" type="month" value="2026-11"/></label>
+</div><div class="quick-action-bar"><a class="quick-calc-button" href="#estimate-card">See my estimated pay <span aria-hidden="true">→</span></a><span class="live-hint"><span class="live-pulse"></span> Changes calculate instantly</span></div>
+<details class="quick-samples"><summary>Try a sample grade <span aria-hidden="true">⌄</span></summary><div class="example-chooser"><div class="example-title"><strong>Just exploring?</strong><span>These are examples, not your real staff details.</span></div><div aria-label="Example grade shortcuts" class="example-buttons"><button data-example-grade="5" type="button">Grade 5</button><button data-example-grade="8" type="button">Grade 8</button><button data-example-grade="11" type="button">Grade 11</button><button data-example-grade="15" type="button">Grade 15</button></div></div></details>
+<details class="progressive-block payslip-reveal" id="payslip-quick"><summary><span class="summary-icon">▤</span><span><strong>Have your payslip? Compare it</strong><small>Optional · enter what you actually received</small></span><span aria-hidden="true" class="summary-arrow">⌄</span></summary><div class="progressive-body"><div class="quick-payslip" id="quick-payslip">
 <div class="quick-payslip-head"><span class="quick-icon">▤</span><div><strong>What does your payslip say?</strong><p>Optional: enter the <b>basic salary actually paid</b> in your selected pay month. Do not include allowances or deductions.</p></div></div>
-<div class="quick-payslip-actions"><label class="field"><span>Actual basic for selected month (KSh)</span><input id="quickBasic" min="0" step="1" inputmode="decimal" type="number" placeholder="e.g. 49,288" aria-describedby="quick-pay-note"/></label><button type="button" class="quick-apply" id="applyQuick">Apply to this month</button><button type="button" class="quick-clear" id="clearQuick">Clear</button></div>
-<p class="quick-hint" id="quick-pay-note">For historical months, edit the actual figures in the monthly timeline. We do not save or transmit your payslip entries.</p></div>
-<div class="friendly-tip">💡 <strong>Not sure about your notch?</strong> Check your appointment letter or payslip first. A different notch changes both salary and arrears estimates.</div>
+<div class="quick-payslip-actions"><label class="field"><span>Actual basic for selected month (KSh)</span><input aria-describedby="quick-pay-note" id="quickBasic" inputmode="decimal" min="0" placeholder="e.g. 49,288" step="1" type="number"/></label><button class="quick-apply" id="applyQuick" type="button">Apply to this month</button><button class="quick-clear" id="clearQuick" type="button">Clear</button></div>
+<p class="quick-hint" id="quick-pay-note">For historical months, edit the actual figures in the monthly timeline. We do not save or transmit your payslip entries.</p></div></div></details>
+<div class="friendly-tip"><span aria-hidden="true">💡</span></div>
 <details class="advanced-options progressive-block"><summary><span class="summary-icon">✦</span><span><strong>My employment changed</strong><small>Promotions, retirement, when revised pay started</small></span><span class="summary-arrow">⌄</span></summary><div class="progressive-body">
 <div class="mini-head-flex extra-head"><h4>Employment changes &amp; implementation</h4><span class="opt-badge">NEW</span></div>
 <p class="enhancement-intro">Adapted for KUSU staff. These changes can affect both the new grade/notch and how long salary differences accumulate.</p>
@@ -271,7 +353,7 @@ body{background:radial-gradient(circle at 12% 15%,#e9edff 0,transparent 28%),rad
 </div>
 <div class="inline-note" id="departure-info">If you leave, the pay estimate shows your final month worked and arrears stop accruing after that month. It does not model gratuity, pension settlement or terminal benefits.</div>
 </div></details>
-<details class="progressive-block allowances-block" open><summary><span class="summary-icon">＋</span><span><strong>Make your allowance estimate more accurate</strong><small>House, commuter, leave & amounts already paid</small></span><span class="summary-arrow">⌄</span></summary><div class="progressive-body"><div class="mini-head"><h4>Your allowances</h4><p>Enter what actually applies at your university.</p></div>
+<details class="progressive-block allowances-block"><summary><span class="summary-icon">＋</span><span><strong>Make your allowance estimate more accurate</strong><small>House, commuter, leave &amp; amounts already paid</small></span><span class="summary-arrow">⌄</span></summary><div class="progressive-body"><div class="mini-head"><h4>Your allowances</h4><p>Enter what actually applies at your university.</p></div>
 <div class="field-grid two-up">
 <label class="field"><span>House / month (KSh)</span><input id="house" inputmode="decimal" min="0" step="1" type="number" value="0"/></label>
 <label class="field"><span>Other / month (KSh)</span><input id="other" inputmode="decimal" min="0" step="1" type="number" value="0"/></label>
@@ -281,7 +363,7 @@ body{background:radial-gradient(circle at 12% 15%,#e9edff 0,transparent 28%),rad
 <label class="field"><span>Other basic arrears paid outside the tracker (KSh)</span><input id="paidArrears" inputmode="decimal" min="0" step="1" type="number" value="0"/></label>
 </div>
 <div class="inline-note"><strong>Commuter is phased at some universities.</strong> KSh 18,000 is the agreed target for Grades 5–15, not proof of the amount currently payable at your university.</div></div></details>
-<details class="progressive-block"><summary><span class="summary-icon">≈</span><span><strong>Want a take-home-pay illustration?</strong><small>Optional PAYE, SHIF, AHL & pension estimates</small></span><span class="summary-arrow">⌄</span></summary><div class="progressive-body"><div class="mini-head-flex"><h4>Illustrative take-home pay</h4><span class="opt-badge">OPTIONAL</span></div>
+<details class="progressive-block"><summary><span class="summary-icon">≈</span><span><strong>Want a take-home-pay illustration?</strong><small>Optional PAYE, SHIF, AHL &amp; pension estimates</small></span><span class="summary-arrow">⌄</span></summary><div class="progressive-body"><div class="mini-head-flex"><h4>Illustrative take-home pay</h4><span class="opt-badge">OPTIONAL</span></div>
 <p class="enhancement-intro">Estimated PAYE and statutory deductions using published Kenyan rates applicable around November 2026. Later-year tax rules may change. This is not a KRA-approved calculator.</p>
 <label class="checkbox-line"><input id="netEnabled" name="netEnabled" type="checkbox"/>Show estimated net pay and deduction breakdown</label>
 <div class="option-pane is-disabled" id="netpane">
@@ -299,12 +381,12 @@ body{background:radial-gradient(circle at 12% 15%,#e9edff 0,transparent 28%),rad
 </div>
 </div></details><div class="form-actions"><button class="reset-button" id="reset" type="button">Reset values</button><span class="autosync"><span></span> Results update instantly</span></div>
 </form>
-<section aria-labelledby="estimate-title" class="result-panel">
-<div class="result-topline"><div class="result-kicker"><span class="live-dot"></span> YOUR ESTIMATE</div><span class="result-period" id="result-period">Nov 2026</span></div>
-<p class="result-label" id="estimate-title">Estimated scheduled monthly gross pay</p>
+<section aria-labelledby="estimate-title" class="result-panel" id="estimate-card">
+<div class="result-status"><span class="status-spark"></span> Your numbers update automatically</div><div class="result-topline"><div class="result-kicker"> LIVE ESTIMATE · STEP 2</div><span class="result-period" id="result-period">Nov 2026</span></div>
+<p class="result-label" id="estimate-title">Your estimated monthly gross pay</p>
 <div class="big-money" id="gross-result">KSh 0</div>
-<p class="result-sub">Revised scheduled pay before PAYE and other deductions. It may not yet appear on your payslip. Annual leave allowance is not included.</p>
-<div class="result-demo" role="note"><strong>DEMO · UNOFFICIAL ESTIMATE</strong><span>Not a confirmed entitlement. Check against your payslip, employer and signed CBA.</span></div>
+<p class="result-sub">Includes your selected basic salary and monthly allowances. Before deductions. Annual leave allowance is shown separately.</p>
+<div class="result-demo" role="note"><strong>DEMO · UNOFFICIAL ESTIMATE</strong><span>Illustration only. Your actual grade, notch, allowances and payslips determine the correct amount.</span></div>
 <div class="hero-rule"></div>
 <div class="result-split"><div><span>New basic salary</span><strong id="basic-result">KSh 0</strong></div><div><span>Selected notch</span><strong id="notch-result">—</strong></div></div>
 <div class="result-lines">
@@ -312,7 +394,7 @@ body{background:radial-gradient(circle at 12% 15%,#e9edff 0,transparent 28%),rad
 <div><span>Assumed commuter</span><strong id="commuter-result">KSh 18,000</strong></div>
 <div><span>Other allowances</span><strong id="other-result">KSh 0</strong></div>
 </div>
-<div class="result-bottom"><div><small>Annual leave allowance (once per year)</small><strong id="leave-result">KSh 0</strong></div><div><small>Commuter difference / month</small><strong id="commuter-gain-result">KSh 0</strong></div></div><p class="result-sub" id="result-employment">Grade and notch can change with the promotion settings.</p>
+<div class="result-bottom"><div><small>Annual leave allowance (once per year)</small><strong id="leave-result">KSh 0</strong></div><div><small>Commuter difference / month</small><strong id="commuter-gain-result">KSh 0</strong></div></div><div class="result-context"><strong>Check the assumptions before sharing</strong><p>Commuter uses your selected rate (KSh 18,000 initially), which may be phased. House allowance defaults to zero until you enter it.</p><div class="result-context-actions"><a data-open-panel="allowances" href="#estimator">Adjust my allowances ↗</a><a href="#reconciliation">Compare payslip ↗</a></div></div><p class="result-sub" id="result-employment">Grade and notch can change with the promotion settings.</p>
 <div aria-live="polite" class="result-net hidden" id="net-results"><h4>Optional November 2026 tax-rule scenario</h4>
 <div class="result-net-big"><span>Estimated take-home pay</span><strong id="net-result">KSh 0</strong></div>
 <div class="result-net-list">
@@ -325,25 +407,53 @@ body{background:radial-gradient(circle at 12% 15%,#e9edff 0,transparent 28%),rad
 </div>
 <p>Indicative only. Arrears tax, other reliefs, payroll-specific pension arrangements and future law changes are excluded.</p>
 </div>
-<div class="share-privacy"><label><input type="checkbox" id="shareFigures"/> Include my estimated salary figures in the WhatsApp message</label><small>Off by default. Sharing is optional: WhatsApp receives only the text you choose to share.</small></div><div class="result-actions"><button id="copy" type="button">Copy estimate <span aria-hidden="true">↗</span></button><button id="shareSafe" type="button" title="Opens WhatsApp with a privacy-safe message">Share on WhatsApp <span aria-hidden="true">↗</span></button><button id="print" type="button">Save PDF / Print <span aria-hidden="true">↗</span></button></div>
+<div class="share-privacy"><label><input id="shareFigures" type="checkbox"/> Include my estimated salary figures in the WhatsApp message</label><small>Off by default. Sharing is optional: WhatsApp receives only the text you choose to share.</small></div><div class="result-actions"><button id="copy" type="button">Copy estimate <span aria-hidden="true">↗</span></button><button id="shareSafe" title="Opens WhatsApp with a privacy-safe message" type="button">Share on WhatsApp <span aria-hidden="true">↗</span></button><button id="print" type="button">Save PDF / Print <span aria-hidden="true">↗</span></button></div>
 </section>
+</div><section aria-label="Live CBA pay dashboard" class="premium-dashboard" id="insights">
+<div class="premium-dashboard-top">
+<div><span class="dash-overline"><span class="dash-spark"></span> LIVE PERSONAL DASHBOARD · STEP 3</span><h3>Your numbers, clearly.</h3><p><span>Review the estimate, then compare it with your payslip.</span></p></div>
+<span class="dashboard-period" id="dash-period">November 2026 · Demo</span>
 </div>
-<section class="recon-panel" id="reconciliation" aria-labelledby="recon-heading">
- <div class="recon-heading"><div><div class="overline">PAYSLIP RECONCILIATION</div><h3 id="recon-heading">Your payslip vs the CBA schedule</h3><p>Compare the selected month’s scheduled basic salary with the amount paid, or the reference assumption if you have not entered a payslip figure.</p></div><span class="recon-status" id="recon-status">Assumed comparator</span></div>
- <div class="recon-grid"><div class="recon-metric"><small>Scheduled basic</small><strong id="recon-due">KSh —</strong><span>Published table rate</span></div><div class="recon-metric"><small>Basic used as paid</small><strong id="recon-actual">KSh —</strong><span id="recon-pay-source">Assumed from salary schedule</span></div><div class="recon-metric standout"><small>Difference this month</small><strong id="recon-delta">KSh —</strong><span id="recon-delta-note">Not a certified debt</span></div></div>
- <div class="recon-foot"><span aria-hidden="true">ⓘ</span> Enter your actual basic in the quick payslip field above, or edit individual months below, to replace assumed figures. This compares <b>basic salary only</b>.</div>
- </section>
+<div class="premium-kpis">
+<article class="premium-kpi kpi-gross"><div class="kpi-top"><span>Monthly gross estimate</span><span aria-hidden="true" class="kpi-symbol">↗</span></div><strong id="dash-gross">KSh —</strong><small>Basic + selected monthly allowances</small><div aria-hidden="true" class="kpi-decor"></div></article>
+<article class="premium-kpi kpi-basic"><div class="kpi-top"><span>Scheduled basic pay</span><span aria-hidden="true" class="kpi-symbol">◈</span></div><strong id="dash-basic">KSh —</strong><small id="dash-grade">Grade 8 · Notch 1</small><div aria-hidden="true" class="kpi-decor"></div></article>
+<article class="premium-kpi kpi-arrears"><div class="kpi-top"><span>Potential basic arrears balance</span><span aria-hidden="true" class="kpi-symbol">⌁</span></div><strong id="dash-arrears">KSh —</strong><small>Scenario only · depends on actual payments</small><div aria-hidden="true" class="kpi-decor"></div></article>
+<article class="premium-kpi kpi-leave"><div class="kpi-top"><span>Annual leave allowance</span><span aria-hidden="true" class="kpi-symbol">✳</span></div><strong id="dash-leave">KSh —</strong><small>Once yearly · excluded from monthly gross</small><div aria-hidden="true" class="kpi-decor"></div></article>
+</div>
+<div class="premium-visual-row">
+<article class="viz-panel"><div class="viz-head"><div><span class="overline">YOUR BASIC-SALARY GAIN</span><h4>Before vs scheduled pay</h4></div><span class="viz-pill">Same grade &amp; notch</span></div>
+<div class="bar-compare">
+<div class="bar-row"><div class="bar-meta"><span>2024/25 reference</span><b id="dash-reference">KSh —</b></div><div class="bar-track"><span class="bar-fill ref" id="dash-ref-bar"></span></div></div>
+<div class="bar-row"><div class="bar-meta"><span>Selected CBA year</span><b id="dash-new">KSh —</b></div><div class="bar-track"><span class="bar-fill new" id="dash-new-bar"></span></div></div>
+</div><div class="compare-bottom"><span class="compare-symbol">↗</span><div><strong id="dash-gain">KSh — more / month</strong><small>Compared with the 2024/25 reference at this notch; this is not necessarily the increase on your payslip.</small></div></div>
+</article>
+<article class="viz-panel composition"><div class="viz-head"><div><span class="overline">YOUR MONTHLY MIX</span><h4>What makes up gross pay?</h4></div></div>
+<div class="mix-layout"><div aria-label="Basic salary and selected allowance share of gross pay" class="mix-ring" id="dash-ring" role="img"><div class="mix-hole"><small>Gross</small><strong id="dash-ring-total">KSh —</strong></div></div><div class="mix-legend">
+<div><span class="mix-dot mix-dot-basic"></span><span>Basic salary</span><strong id="dash-mix-basic">—</strong></div>
+<div><span class="mix-dot mix-dot-commuter"></span><span>Assumed commuter</span><strong id="dash-mix-commuter">—</strong></div>
+<div><span class="mix-dot mix-dot-other"></span><span>House + other</span><strong id="dash-mix-other">—</strong></div>
+</div></div>
+<p class="mix-note">The KSh 18,000 commuter figure is a <strong>target rate</strong> and may be phased at your university. Adjust it below.</p>
+</article>
+</div>
+<div class="dashboard-bottom"><span class="green-pulse"></span> Everything is calculated locally in your browser. No account, tracking or automatic server submission. <a href="#estimator">Adjust my inputs ↗</a></div>
+</section>
+<section aria-labelledby="recon-heading" class="recon-panel" id="reconciliation">
+<div class="recon-heading"><div><div class="overline">PAYSLIP RECONCILIATION</div><h3 id="recon-heading">Your payslip vs the CBA schedule</h3><p>Compare the selected month’s scheduled basic salary with the amount paid, or the reference assumption if you have not entered a payslip figure.</p></div><span class="recon-status" id="recon-status">Assumed comparator</span></div>
+<div class="recon-grid"><div class="recon-metric"><small>Scheduled basic</small><strong id="recon-due">KSh —</strong><span>Published table rate</span></div><div class="recon-metric"><small>Basic used as paid</small><strong id="recon-actual">KSh —</strong><span id="recon-pay-source">Assumed from salary schedule</span></div><div class="recon-metric standout"><small>Difference this month</small><strong id="recon-delta">KSh —</strong><span id="recon-delta-note">Not a certified debt</span></div></div>
+<div class="recon-foot"><span aria-hidden="true">ⓘ</span> Enter your actual basic in the quick payslip field above, or edit individual months below, to replace assumed figures. This compares <b>basic salary only</b>.</div>
+</section>
 <div class="arrears-panel">
 <div class="arrears-heading"><div><div class="overline">BASIC-SALARY ARREARS</div><h3>Potential arrears, broken down.</h3><p>Calculated month by month against the 2024/25 reference scale at each applicable notch, unless you enter actual basic pay in the timeline below.</p></div><div class="due-caveat">Illustrative only <span aria-hidden="true">✳</span></div></div>
 <div class="arrears-cards"><div class="arrears-card"><small>01 · Jul 2025–Jun 2026</small><strong id="arrears-first">KSh 0</strong><span>12-month basic difference</span></div><div class="arrears-card"><small>02 · Jul–Dec 2026</small><strong id="arrears-second">KSh 0</strong><span>6-month basic difference</span></div><div class="arrears-card featured"><small>Estimated accrued balance to current month</small><strong id="arrears-total">KSh 0</strong><span>Accrued basic differences minus payments entered; excludes future months and allowance arrears</span></div></div><div class="arrears-extra"><div><strong>Additional basic difference after Dec 2026</strong><br/><span>Only if your entered implementation date is later than January 2027, capped at last month worked / Jun 2029</span></div><strong id="arrears-late">KSh 0</strong></div>
 <p class="caution">The first two cards show the full agreement periods and can include future projections. The highlighted accrued balance counts months up to the current calendar month only, minus payments entered. The additional post-December figure is a separate scenario and NOT proof of amounts owed. Check your payslips and employer records.</p>
 </div>
-<section class="tracker-panel" id="arrears-tracker" aria-labelledby="tracker-title">
+<section aria-labelledby="tracker-title" class="tracker-panel" id="arrears-tracker">
 <div class="tracker-head"><div><span class="overline">PAYMENT TRACKER</span><h3 id="tracker-title">Know what has been paid — and what's still estimated.</h3><p>The agreement says 2025/26 arrears will be paid in three equal instalments (individual dates unspecified) and July–December 2026 arrears with January 2027 salary. Enter actual <b>basic arrears payments</b>, not regular salary.</p></div><span class="tracker-mark">NOT A PAYMENT CONFIRMATION</span></div>
-<div class="tracker-grid"><label class="tracker-item"><span><b>01</b> First 2025/26 instalment</span><small>Illustrative instalment: <strong id="track-due1">KSh —</strong></small><input id="payment1" type="number" min="0" step="1" inputmode="decimal" placeholder="Amount received (KSh)"/></label>
-<label class="tracker-item"><span><b>02</b> Second 2025/26 instalment</span><small>Illustrative instalment: <strong id="track-due2">KSh —</strong></small><input id="payment2" type="number" min="0" step="1" inputmode="decimal" placeholder="Amount received (KSh)"/></label>
-<label class="tracker-item"><span><b>03</b> Third 2025/26 instalment</span><small>Illustrative instalment: <strong id="track-due3">KSh —</strong></small><input id="payment3" type="number" min="0" step="1" inputmode="decimal" placeholder="Amount received (KSh)"/></label>
-<label class="tracker-item"><span><b>04</b> Jul–Dec 2026 settlement</span><small>Scheduled for Jan 2027: <strong id="track-due4">KSh —</strong></small><input id="paymentJan" type="number" min="0" step="1" inputmode="decimal" placeholder="Amount received (KSh)"/></label></div>
+<div class="tracker-grid"><label class="tracker-item"><span><b>01</b> First 2025/26 instalment</span><small>Illustrative instalment: <strong id="track-due1">KSh —</strong></small><input id="payment1" inputmode="decimal" min="0" placeholder="Amount received (KSh)" step="1" type="number"/></label>
+<label class="tracker-item"><span><b>02</b> Second 2025/26 instalment</span><small>Illustrative instalment: <strong id="track-due2">KSh —</strong></small><input id="payment2" inputmode="decimal" min="0" placeholder="Amount received (KSh)" step="1" type="number"/></label>
+<label class="tracker-item"><span><b>03</b> Third 2025/26 instalment</span><small>Illustrative instalment: <strong id="track-due3">KSh —</strong></small><input id="payment3" inputmode="decimal" min="0" placeholder="Amount received (KSh)" step="1" type="number"/></label>
+<label class="tracker-item"><span><b>04</b> Jul–Dec 2026 settlement</span><small>Scheduled for Jan 2027: <strong id="track-due4">KSh —</strong></small><input id="paymentJan" inputmode="decimal" min="0" placeholder="Amount received (KSh)" step="1" type="number"/></label></div>
 <div class="tracker-totals"><div><small>Basic differences accrued through <span id="track-asof">now</span></small><strong id="track-accrued">KSh —</strong></div><div><small>Payments entered (including other paid)</small><strong id="track-paid">KSh —</strong></div><div class="tracker-balance"><small>Estimated balance to date</small><strong id="track-balance">KSh —</strong></div></div>
 <p class="tracker-legal"><b>Important:</b> Instalment amounts shown above are mathematical splits of the estimated first-period arrears, not confirmed payslip or employer payment figures. Only actual payments you enter reduce the accrued balance; no entries are automatically transmitted.</p>
 </section>
@@ -355,7 +465,7 @@ body{background:radial-gradient(circle at 12% 15%,#e9edff 0,transparent 28%),rad
 <div class="table-foot"><span>Blank actual-pay cells use the 2024/25 reference salary at that month's notch.</span><button class="text-button" id="clearActual" type="button">Clear actual-pay entries</button></div>
 </div>
 </div>
-<section class="math-panel" id="explain-my-numbers" aria-labelledby="explain-math-title"><div class="math-header"><span class="overline">YOUR CALCULATION, EXPLAINED</span><h3 id="explain-math-title">No mystery behind the numbers.</h3><p>These steps are generated from your inputs and the signed salary schedule—not a general percentage shortcut.</p></div><div class="math-steps"><div class="math-step"><span class="math-number">01</span><div><strong>Where you are in the schedule</strong><p id="math-position">—</p></div></div><div class="math-step"><span class="math-number">02</span><div><strong>How your basic salary is found</strong><p id="math-salary">—</p></div></div><div class="math-step"><span class="math-number">03</span><div><strong>How your selected monthly difference is found</strong><p id="math-difference">—</p></div></div><div class="math-step"><span class="math-number">04</span><div><strong>How arrears are estimated</strong><p id="math-arrears">—</p></div></div></div><div class="math-source">Sources: <strong>30 October 2026 Return-to-Work Formula, Schedule I (salary tables, PDF pages 9–14) and Schedule II (allowances, PDF page 8).</strong> Payment clauses appear on pages 4–5. Source documents are not replaced by this demonstration.</div></section>
+<section aria-labelledby="explain-math-title" class="math-panel" id="explain-my-numbers"><div class="math-header"><span class="overline">YOUR CALCULATION, EXPLAINED</span><h3 id="explain-math-title">No mystery behind the numbers.</h3><p>These steps are generated from your inputs and the signed salary schedule—not a general percentage shortcut.</p></div><div class="math-steps"><div class="math-step"><span class="math-number">01</span><div><strong>Where you are in the schedule</strong><p id="math-position">—</p></div></div><div class="math-step"><span class="math-number">02</span><div><strong>How your basic salary is found</strong><p id="math-salary">—</p></div></div><div class="math-step"><span class="math-number">03</span><div><strong>How your selected monthly difference is found</strong><p id="math-difference">—</p></div></div><div class="math-step"><span class="math-number">04</span><div><strong>How arrears are estimated</strong><p id="math-arrears">—</p></div></div></div><div class="math-source">Sources: <strong>30 October 2026 Return-to-Work Formula, Schedule I (salary tables, PDF pages 9–14) and Schedule II (allowances, PDF page 8).</strong> Payment clauses appear on pages 4–5. Source documents are not replaced by this demonstration.<a class="inline-source-link" href="./sources/Return-to-Work-Formula-30-Oct-2026.pdf" rel="noopener noreferrer" target="_blank">Read source document ↗</a></div></section>
 </section>
 <section class="section schedule-section" id="schedule">
 <div class="wrap">
@@ -366,7 +476,7 @@ body{background:radial-gradient(circle at 12% 15%,#e9edff 0,transparent 28%),rad
 <section class="section explain-section" id="how-it-works">
 <div class="wrap"><div class="section-intro"><div><div class="overline">UNDERSTANDING THE NUMBERS</div><h2>How the estimator works.</h2><p>A transparent explanation of what it calculates — and where it stops.</p></div><span class="section-count">03 / 03</span></div>
 <div class="explain-grid"><article class="explain-card"><span class="explain-index">01</span><h3>Start at 30 June 2025</h3><p>Choose your grade and the notch you had on 30 June 2025. This is the starting position for the timeline.</p></article><article class="explain-card"><span class="explain-index">02</span><h3>Move across each July</h3><p>Each July, the model uses the next annual column in the published salary schedule (the negotiated 3.5% rate revision).</p></article><article class="explain-card"><span class="explain-index">03</span><h3>Move down on your anniversary</h3><p>In your chosen increment month, the notch advances by one, up to the table maximum of 12. July increments apply alongside July's new rate.</p></article><article class="explain-card"><span class="explain-index">04</span><h3>Compare with actual pay</h3><p>The model estimates monthly basic differences. Replace its reference amounts with what your payslip actually shows for better estimates.</p></article></div>
-<div class="explain-disclaimer" role="note"><div aria-hidden="true" class="explain-disclaimer-icon">!</div><div><strong>Demo · Unofficial estimate.</strong><p>Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. <b>No entered pay data is transmitted automatically. Sharing via WhatsApp sends only the message you choose.</b> Validate your entitlement with your employer, payslip and the signed CBA documents.</p></div></div><div class="sources-links"><a href="https://www.kra.go.ke/individual/filing-paying/types-of-taxes/paye" rel="noopener noreferrer" target="_blank">KRA PAYE bands ↗</a><a href="https://www.kra.go.ke/news-center/public-notices/2099-collection-of-the-affordable-housing-levy-by-kenya-revenue-authority" rel="noopener noreferrer" target="_blank">KRA Housing Levy ↗</a><a href="https://www.nssf.or.ke/notice-to-employers-year-4-2026-nssf-contribution-rates" rel="noopener noreferrer" target="_blank">NSSF 2026 notice ↗</a><a href="https://sha.go.ke/" rel="noopener noreferrer" target="_blank">SHA / SHIF ↗</a></div>
+<div class="explain-disclaimer" role="note"><div aria-hidden="true" class="explain-disclaimer-icon">!</div><div><strong>Demo · Unofficial estimate.</strong><p>Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. <b>No entered pay data is transmitted automatically. Sharing via WhatsApp sends only the message you choose.</b> Validate your entitlement with your employer, payslip and the signed CBA documents.</p></div></div><div class="sources-links"><a class="source-pdf" href="./sources/Return-to-Work-Formula-30-Oct-2026.pdf" rel="noopener noreferrer" target="_blank">📄 View signed Return-to-Work Formula (PDF) ↗</a><a href="https://www.kra.go.ke/individual/filing-paying/types-of-taxes/paye" rel="noopener noreferrer" target="_blank">KRA PAYE bands ↗</a><a href="https://www.kra.go.ke/news-center/public-notices/2099-collection-of-the-affordable-housing-levy-by-kenya-revenue-authority" rel="noopener noreferrer" target="_blank">KRA Housing Levy ↗</a><a href="https://www.nssf.or.ke/notice-to-employers-year-4-2026-nssf-contribution-rates" rel="noopener noreferrer" target="_blank">NSSF 2026 notice ↗</a><a href="https://sha.go.ke/" rel="noopener noreferrer" target="_blank">SHA / SHIF ↗</a></div>
 <div class="faq-grid"><div class="faq-intro"><h3>Important things to know.</h3><p>Read these before sharing or relying on your results.</p></div><div class="faq-list">
 <details open=""><summary>Does this calculate net pay?</summary><p>Yes, optionally. It uses a clearly labeled scenario based on published Kenyan tax and statutory deduction rules around November 2026. It is illustrative, particularly for later CBA years. Your payslip, KRA and pension scheme arrangements control.</p></details>
 <details><summary>Is KSh 18,000 commuter allowance guaranteed immediately?</summary><p>No. The agreement lists a commuter target of KSh 18,000 per month for Grades 5–15, but permits progressive implementation over up to three years for universities currently paying below that rate. Enter the amount you expect your institution to implement.</p></details>
@@ -377,10 +487,10 @@ body{background:radial-gradient(circle at 12% 15%,#e9edff 0,transparent 28%),rad
 <details><summary>How are promotions and departures treated?</summary><p>A promotion resets the grade and notch from the selected effective month. The chosen increment month continues afterwards, but no separate increment is applied in the same month as the promotion. If you leave, arrears accumulate only through your final month of employment. Promotions may make the previous-year reference comparator unsuitable; enter actual basic pay for accurate comparisons.</p></details><details><summary>Does "first month new salary is paid" change the CBA effective date?</summary><p>No. The CBA schedule is applied from July 2025. The implementation field only estimates when your payslip began reflecting the revised salary and therefore when unpaid basic salary differences stop accumulating. Any actual-pay entries override the assumption.</p></details></div></div>
 </div>
 </section>
-<section class="bottom-cta"><div class="wrap bottom-inner"><div><div class="overline">A BETTER-INFORMED PAYSLIP</div><h2>Check the schedule.<br/>Ask better questions.</h2><p>Use this demonstration to prepare for a payroll discussion, not to replace one.</p></div><a class="primary-button" href="#estimator">Back to my estimate ↗</a></div></section>
+<section class="bottom-cta"><div class="wrap bottom-inner"><div><div class="overline">READY TO DOUBLE-CHECK?</div><h2>Your payslip is the final check.</h2><p>Use PayLens to prepare your questions, then confirm your numbers with your university and the signed CBA.</p></div><div class="bottom-buttons"><a class="primary-button" href="#estimator">Calculate again →</a><a class="source-link-button" href="./sources/Return-to-Work-Formula-30-Oct-2026.pdf" rel="noopener noreferrer" target="_blank">Read the source PDF ↗</a></div></div></section>
 </main>
-<footer class="site-footer"><div class="wrap footer-grid"><div class="footer-brand"><strong>KUSU PayLens Pro</strong><p>Independent demonstration for Kenyan public university staff. Not a payroll or official union service.</p></div><div class="footer-note"><strong>Demo · Unofficial estimate.</strong><p>Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. <strong>No entered pay data is transmitted automatically. Sharing via WhatsApp sends only the message you choose.</strong> Validate your entitlement with your employer, payslip and the signed CBA documents.</p></div></div><div class="wrap footer-last"><span>Salary sources: 30 October 2026 Return-to-Work Formula · Schedules I &amp; II</span><span>PayLens Pro · v2.0 · 2 November 2026 · Works offline after first visit</span></div><div class="wrap footer-credit"><span>Prepared by</span> <strong>Eng Dan Otieno</strong><span class="footer-role">ICT Expert</span></div></footer>
-<nav class="mobile-dock" aria-label="Quick links"><a href="#estimator"><span>⌨</span>Calculate</a><a href="#insights"><span>◫</span>Dashboard</a><a href="#timeline"><span>⌁</span>Timeline</a><a href="#schedule"><span>▦</span>Tables</a></nav>
+<footer class="site-footer"><div class="wrap footer-grid"><div class="footer-brand"><strong>KUSU PayLens Pro</strong><p>Independent demonstration for Kenyan public university staff. Not a payroll or official union service.</p></div><div class="footer-note"><strong>Demo · Unofficial estimate.</strong><p>Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. <strong>No entered pay data is transmitted automatically. Sharing via WhatsApp sends only the message you choose.</strong> Validate your entitlement with your employer, payslip and the signed CBA documents.</p></div></div><div class="wrap footer-last"><span>Salary sources: 30 October 2026 Return-to-Work Formula · Schedules I &amp; II</span><span>PayLens · v3.0 · 2 November 2026 · Offline-friendly after installation</span></div><div class="wrap footer-credit"><span>Prepared by</span> <strong>Eng Dan Otieno</strong><span class="footer-role">ICT Expert</span></div></footer>
+<nav aria-label="Quick links" class="mobile-dock"><a href="#estimator"><span>⌨</span>Calculate</a><a href="#insights"><span aria-hidden="true">◫</span>My result</a><a href="#arrears-tracker"><span aria-hidden="true">▣</span>Arrears</a><a href="#schedule"><span aria-hidden="true">▦</span>Tables</a></nav>
 <script>const CBA_DATA = {"salary":{"5":{"1":[32485,33622,34799,36017,37278],"2":[33785,35304,36540,37819,39143],"3":[35137,37070,38368,39711,41101],"4":[36543,38924,40287,41698,43158],"5":[38004,40871,42302,43783,45316],"6":[39525,42915,44418,45973,47583],"7":[41106,45061,46639,48272,49962],"8":[42750,47314,48970,50684,52458],"9":[44461,49680,51419,53219,55082],"10":[46239,52164,53990,55880,57836],"11":[48089,54773,56691,58676,60730],"12":[50014,57511,59524,61608,63765]},"6":{"1":[36914,38206,39544,40929,42362],"2":[38392,40117,41522,42976,44481],"3":[39927,42123,43598,45124,46704],"4":[41525,44229,45778,47381,49040],"5":[43186,46441,48067,49750,51492],"6":[44913,48763,50470,52237,54066],"7":[46711,51202,52995,54850,56770],"8":[48580,53763,55645,57593,59609],"9":[50523,56451,58427,60472,62589],"10":[52544,59275,61350,63498,65721],"11":[54647,62239,64418,66673,69007],"12":[56833,65351,67639,70007,72458]},"7":{"1":[42858,44359,45912,47519,49183],"2":[44573,46577,48208,49896,51643],"3":[46357,48906,50618,52390,54224],"4":[48211,51352,53150,55011,56937],"5":[50140,53920,55808,57762,59784],"6":[52147,56616,58598,60649,62772],"7":[54233,59448,61529,63683,65912],"8":[56402,62420,64605,66867,69208],"9":[58660,65542,67836,70211,72669],"10":[61007,68820,71229,73723,76304],"11":[63448,72261,74791,77409,80119],"12":[65986,75874,78530,81279,84124]},"8":{"1":[47621,49288,51014,52800,54648],"2":[49527,51754,53566,55441,57382],"3":[51507,54342,56244,58213,60251],"4":[53568,57060,59058,61126,63266],"5":[55711,59914,62011,64182,66429],"6":[57941,62910,65112,67391,69750],"7":[60259,66056,68368,70761,73238],"8":[62671,69360,71788,74301,76902],"9":[65177,72828,75377,78016,80747],"10":[67785,76470,79147,81918,84786],"11":[70497,80295,83106,86015,89026],"12":[73317,84310,87261,90316,93478]},"9":{"1":[55373,57312,59318,61395,63544],"2":[57588,60177,62284,64464,66721],"3":[59892,63187,65399,67688,70058],"4":[62288,66347,68670,71074,73562],"5":[64779,69665,72104,74628,77240],"6":[67373,73149,75710,78360,81103],"7":[70067,76807,79496,82279,85159],"8":[72870,80648,83471,86393,89417],"9":[75785,84680,87644,90712,93887],"10":[78818,88914,92026,95247,98581],"11":[81971,93361,96629,100012,103513],"12":[85250,98029,101461,105013,108689]},"10":{"1":[63647,65875,68181,70568,73038],"2":[66194,69170,71591,74097,76691],"3":[68843,72629,75172,77804,80528],"4":[71596,76260,78930,81693,84553],"5":[74460,80074,82877,85778,88781],"6":[77439,84079,87022,90068,93221],"7":[80538,88283,91373,94572,97883],"8":[83759,92697,95942,99300,102776],"9":[87110,97333,100740,104266,107916],"10":[90594,102201,105779,109482,113314],"11":[94218,107311,111067,114955,118979],"12":[97988,112678,116622,120704,124929]},"11":{"1":[96006,99367,102845,106445,110171],"2":[99848,104336,107988,111768,115680],"3":[103842,109553,113388,117357,121465],"4":[107996,115031,119058,123226,127539],"5":[112317,120784,125012,129388,133917],"6":[116810,126823,131262,135857,140612],"7":[121482,133165,137826,142650,147643],"8":[126342,139824,144718,149784,155027],"9":[131395,146815,151954,157273,162778],"10":[136653,154157,159553,165138,170918],"11":[142119,161865,167531,173395,179464],"12":[147805,169959,175908,182065,188438]},"12":{"1":[119858,124054,128396,132890,137542],"2":[124653,130256,134815,139534,144418],"3":[129640,136770,141557,146512,151640],"4":[134826,143609,148636,153839,159224],"5":[140220,150790,156068,161531,167185],"6":[145829,158330,163872,169608,175545],"7":[151662,166246,172065,178088,184322],"8":[157729,174559,180669,186993,193538],"9":[164039,183288,189704,196344,203217],"10":[170600,192453,199189,206161,213377],"11":[177425,202076,209149,216470,224047],"12":[184523,212181,219608,227295,235251]},"13":{"1":[136171,140937,145870,150976,156261],"2":[141619,147985,153165,158526,164075],"3":[147284,155384,160823,166452,172278],"4":[153175,163154,168865,174776,180894],"5":[159303,171312,177308,183514,189937],"6":[165676,179877,186173,192690,199435],"7":[172303,188871,195482,202324,209406],"8":[179195,198316,205258,212443,219879],"9":[186365,208232,215521,223065,230873],"10":[193819,218644,226297,234218,242416],"11":[201572,229577,237613,245930,254538],"12":[209636,241056,249493,258226,267264]},"14":{"1":[173864,179950,186249,192768,199515],"2":[180819,188948,195562,202407,209492],"3":[188053,198396,205340,212527,219966],"4":[195574,208316,215608,223155,230966],"5":[203398,218732,226388,234312,242513],"6":[211534,229669,237708,246028,254639],"7":[219995,241153,249594,258330,267372],"8":[228796,253211,262074,271247,280741],"9":[237948,265872,275178,284810,294779],"10":[247467,279167,288938,299051,309518],"11":[257366,293126,303386,314005,324996],"12":[267662,307783,318556,329706,341246]},"15":{"1":[224631,232494,240632,249055,257772],"2":[233616,244119,252664,261508,270661],"3":[242962,256325,265297,274583,284194],"4":[252680,269142,278562,288312,298403],"5":[262789,282599,292490,302728,313324],"6":[273301,296730,307116,317866,328992],"7":[284233,311567,322472,333759,345441],"8":[295604,327145,338596,350447,362713],"9":[307428,343504,355527,367971,380850],"10":[319725,360679,373303,386369,399892],"11":[332515,378714,391969,405688,419888],"12":[345816,397651,411569,425974,440884]}},"leave":{"15":21980,"14":21197,"13":19021,"12":17570,"11":14087,"10":8754,"9":8754,"8":8173,"7":8056,"6":7154,"5":6225}};</script>
 <script>(function () {
   'use strict';
@@ -731,7 +841,6 @@ Estimates only. Allowance arrears and tax on arrears excluded.`;
   update();
 })();
 </script>
-
 <script>
 /* Presentation layer only. Original published KUSU tables and calculator remain the calculation authority. */
 (function(){
@@ -777,15 +886,45 @@ Estimates only. Allowance arrears and tax on arrears excluded.`;
  refreshDashboard();
 })();
 </script>
-
-<section class="print-report" id="print-report" aria-label="Personal estimate report">
- <header class="print-head"><div><strong>KUSU PayLens Pro</strong><h1>Personal CBA pay estimate</h1><p>Independent, unofficial salary and arrears illustration</p></div><span>DEMO · UNOFFICIAL</span></header>
- <div class="print-alert"><b>Demo · Unofficial estimate.</b> Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. Validate your entitlement with your employer, payslip and the signed CBA documents.</div>
- <table class="print-metrics"><tbody id="print-metrics-body"></tbody></table>
- <h2>Calculation explanation</h2><p id="print-method"></p>
- <h2>Payment reconciliation</h2><p id="print-arrears"></p>
- <p class="print-foot">Schedule I (PDF pages 9–14) and Schedule II (PDF page 8) · 30 October 2026 Return-to-Work Formula. Arrears projections exclude allowance arrears and taxes on arrears. Figures are not approved payroll calculations.</p><div class="print-credit">Prepared by <b>Eng Dan Otieno | ICT Expert</b></div>
- </section>
+<section aria-label="Personal estimate report" class="print-report" id="print-report">
+<header class="print-head"><div><strong>KUSU PayLens Pro</strong><h1>Personal CBA pay estimate</h1><p>Independent, unofficial salary and arrears illustration</p></div><span>DEMO · UNOFFICIAL</span></header>
+<div class="print-alert"><b>Demo · Unofficial estimate.</b> Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. Validate your entitlement with your employer, payslip and the signed CBA documents.</div>
+<table class="print-metrics"><tbody id="print-metrics-body"></tbody></table>
+<h2>Calculation explanation</h2><p id="print-method"></p>
+<h2>Payment reconciliation</h2><p id="print-arrears"></p>
+<p class="print-foot">Schedule I (PDF pages 9–14) and Schedule II (PDF page 8) · 30 October 2026 Return-to-Work Formula. Arrears projections exclude allowance arrears and taxes on arrears. Figures are not approved payroll calculations.</p><div class="print-credit">Prepared by <b>Eng Dan Otieno | ICT Expert</b></div>
+</section>
 <script>if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost')) {window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}</script>
-</body>
+<script>
+(function(){
+ const forms=document.getElementById('estimator-form');
+ document.querySelectorAll('[data-open-panel="allowances"]').forEach(el=>el.addEventListener('click',()=>{
+   const details=forms.querySelector('.allowances-block'); details.open=true;
+   setTimeout(()=>details.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'}),25);
+ }));
+ document.querySelectorAll('a[href="#reconciliation"]').forEach(el=>el.addEventListener('click',()=>{
+   const details=document.getElementById('payslip-quick'); details.open=true;
+ }));
+ // Default to the current Kenya month, within the CBA period; do not store user inputs.
+ const parts=Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Nairobi',year:'numeric',month:'2-digit'}).formatToParts(new Date());
+ const year=parts.find(p=>p.type==='year').value;
+ const month=parts.find(p=>p.type==='month').value;
+ const key=year+'-'+month;
+ const currentKey=key<'2025-07'?'2025-07':key>'2029-06'?'2029-06':key;
+ const monthPicker=document.getElementById('estimateMonth');
+ monthPicker.value=currentKey;monthPicker.dispatchEvent(new Event('input',{bubbles:true}));
+ document.getElementById('reset').addEventListener('click',()=>{monthPicker.value=currentKey;monthPicker.dispatchEvent(new Event('input',{bubbles:true}));});
+ const title=document.getElementById('dash-gross');
+ if(title){title.setAttribute('aria-live','polite');title.setAttribute('aria-atomic','true');}
+ // Keep active section indicated in the nav; observing headings never reads input data.
+ if('IntersectionObserver' in window){
+   const navLinks=[...document.querySelectorAll('.desktop-nav a')];
+   const watch=navLinks.map(el=>document.querySelector(el.getAttribute('href'))).filter(Boolean);
+   const ob=new IntersectionObserver(entries=>{
+     for(const e of entries) if(e.isIntersecting){const id=e.target.id; navLinks.forEach(a=>{if(a.getAttribute('href')==='#'+id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});}
+   },{rootMargin:'-15% 0px -70% 0px'});
+   watch.forEach(el=>ob.observe(el));
+ }
+})();
+</script></body>
 </html>
