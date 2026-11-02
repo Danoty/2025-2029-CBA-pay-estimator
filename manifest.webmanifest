@@ -1,0 +1,24 @@
+{
+  "name": "KUSU PayLens Pro \u2014 CBA Pay Estimator (Demo)",
+  "short_name": "PayLens Pro",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f6ff",
+  "theme_color": "#312461",
+  "description": "Independent KUSU CBA salary and arrears estimator. Unofficial demonstration.",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

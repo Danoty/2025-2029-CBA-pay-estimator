@@ -1,32 +1,34 @@
-# KUSU PayLens — Premium 2025–2029 CBA estimator
+# KUSU PayLens Pro — Independent CBA Estimator
 
-**Independent demo · Not an official KUSU or government calculator.**
+**Version 2.0 (2 November 2026)**
 
-Designed and prepared by **Eng Dan Otieno | ICT Expert**.
+Independent GitHub Pages web app for KUSU Grades 5–15, 12 notches each, using the Return-to-Work Formula dated 30 October 2026. The salary tables originate from the uploaded schedule, not from public APIs.
 
 ## Publish on GitHub Pages
-1. Create a GitHub repository (e.g. `kusu-paylens`).
-2. Upload `index.html`, `.nojekyll`, and this `README.md` to the repository root.
-3. In GitHub repository **Settings → Pages**, select **Deploy from a branch**, branch `main`, folder `/(root)` and Save.
-4. The URL will be `https://YOUR-GITHUB-USERNAME.github.io/kusu-paylens/` (assuming that repository name).
+
+1. Create a public repository (for example `kusu-paylens`).
+2. Upload **all** files from this folder to the repository root, including `index.html`, `.nojekyll`, `manifest.webmanifest`, `sw.js`, `icon.svg`, `icon-192.png`, and `icon-512.png`.
+3. GitHub **Settings → Pages → Deploy from a branch → main → /(root)**.
+4. Publish the URL in `https://USERNAME.github.io/kusu-paylens/` format.
+5. Existing deployment: replace all old files, then hard-refresh or clear the site's offline cache if an old version persists.
 
 ## Features
-- Colourful responsive dashboard with monthly gross/basic/leave/arrears KPI cards.
-- 2024/25 reference vs scheduled basic pay comparison chart and pay composition chart.
-- Grade 5–15, Notch 1–12 official salary grids (schedule embedded, July 2025–June 2029).
-- Diagonal increments: move one notch in user's increment month, switch year table in July.
-- Promotion, departure, implementation-date assumptions.
-- Commuter and annual leave allowance (commuter **target** can be phased).
-- Optional indicative statutory deduction scenario; not official or guaranteed net salary.
-- Monthly salary timeline, editable actual basic paid, CSV export, print, copy estimate.
-- All calculations are client-side: no form data is sent to a server.
+
+- Grade/starting-notch, increment-month diagonal salary movement and effective CBA-year rates.
+- Optional promotions/exit date and a selected-month scenario.
+- Responsive gross pay dashboard, commuter/leave allowances and optional statutory deduction scenario.
+- Payslip-vs-schedule reconciliation using an optional actual basic-paid input.
+- Month-by-month actual basic-paid editing for historical reconciliation.
+- Arrears payment tracker for three 2025/26 instalments and Jan 2027 settlement; payment amounts are **user-entered only**.
+- Accurate **accrued-to-current-month** basic differences separate from future projections.
+- Calculation explanations, print-to-PDF report, CSV timeline export.
+- Privacy-safe WhatsApp sharing. The salary figures are excluded by default; the user can opt in. Opening WhatsApp intentionally sends the message to WhatsApp.
+- Installable/offline-capable after the first visit. No backend or remote scripts.
 
 ## Important limitations
-- The sign-off was a **Return-to-Work Formula dated 30 October 2026**. The signed tables are the primary basis; the tool is an unofficial interpretation.
-- Estimated basic salary differences are not verified arrears. Adjust actual paid amounts, promotions and dates using payroll/payslip records.
-- Commuter target of KSh 18,000/month for Grades 5–15 can be progressively implemented at some universities, so the figure is not necessarily currently paid.
-- Annual leave allowance is annual and is **not** part of monthly gross pay.
-- Statutory deductions are **indicative** and could be outdated if rules change; contact payroll/KRA for actual deductions.
-- No backend, cookies, ads, analytics or third-party scripts. External source links are optional and activate only if clicked.
 
-**Disclaimer:** Demo · Unofficial estimate. Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. No data is transmitted to a server. Validate your entitlement with your employer, payslip and signed CBA documents.
+This site is a **DEMO / UNOFFICIAL ESTIMATE**. It is not endorsed by KUSU, IPUCCF, the Ministry, KRA or any other body. It does not establish legal entitlement, grades or salary payment dates. The commuter allowance is a target of KSh 18,000/month with allowed phased transition. Allowance arrears, tax on arrears, personnel exceptions and all employer-specific interpretations are excluded. Optional 2026 net-pay assumptions are not a certified tax computation.
+
+The app does **not automatically transmit form data**. Values are held in memory while the page stays open, not persisted. Clicking WhatsApp sends the message you approve to that external service. Clicking external sources opens those external sites.
+
+Prepared by **Eng Dan Otieno | ICT Expert**.
