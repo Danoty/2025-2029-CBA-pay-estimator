@@ -1,12 +1,12 @@
 {
-  "name": "KUSU PayLens \u2014 CBA Pay Calculator (Independent Demo)",
+  "name": "KUSU PayLens 4.0 — CBA Pay Estimator (Independent Demo)",
   "short_name": "PayLens",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f5f8fc",
-  "theme_color": "#10243b",
-  "description": "Fast, simple CBA salary and arrears estimator for KUSU Grades 5\u201315. Unofficial demonstration.",
+  "theme_color": "#34237c",
+  "description": "Easy three-step CBA salary, allowances and arrears estimator for KUSU Grades 5–15. Unofficial demonstration.",
   "icons": [
     {
       "src": "./icon-192.png",

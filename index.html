@@ -6,10 +6,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="#10243b" name="theme-color"/>
 <meta content="Eng Dan Otieno — ICT Expert" name="author"/>
-<meta content="Simple independent KUSU 2025–2029 CBA pay calculator for Grades 5–15. Estimate basic pay, monthly allowances, arrears and compare with your payslip. No signup." name="description"/>
-<meta content="2025–2029 CBA Pay Estimator | Independent Demo" property="og:title"/>
-<meta content="Check Grades 5–15, 12 notches, annual increments and estimated salary arrears. Unofficial demonstration only." property="og:description"/>
-<title>KUSU PayLens | Easy CBA Pay Calculator, Payslip &amp; Arrears (Unofficial Demo)</title>
+<meta content="Easy three-step KUSU 2025–2029 CBA pay calculator. Check Grades 5–15, diagonal increments, monthly basic salary, commuter and leave allowances, and illustrative arrears. Independent, unofficial estimate." name="description"/>
+<meta content="KUSU PayLens 4.0 · Your CBA pay, made simple" property="og:title"/>
+<meta content="Estimate your KUSU CBA pay in three simple steps. Independent demo by Eng Dan Otieno | ICT Expert." property="og:description"/>
+<title>KUSU PayLens 4.0 | Simple CBA Pay Calculator · Independent Demo</title>
 <style>:root{--navy:#13243d;--navy2:#0e1b2f;--ink:#192b41;--muted:#68788a;--line:#e2e8ec;--canvas:#f5f7f8;--paper:#fff;--gold:#d4ad71;--goldlight:#f8efdf;--green:#18765f;--greenlight:#eaf4f0;--shadow:0 24px 64px rgba(13,31,51,.07)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:96px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--canvas);font-size:15px;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #d4ad71;outline-offset:3px}a{color:inherit;text-decoration:none}a:hover{text-decoration:none}p{line-height:1.7}.wrap{width:min(1200px,calc(100% - 48px));margin:auto}.skip-link{position:absolute;top:-100px;left:10px;background:white;padding:12px;z-index:100}.skip-link:focus{top:10px}
 .notice{background:#10213a;color:#dfe5ee;font-size:12px;line-height:1.65;letter-spacing:.012em}.notice-inner{padding:9px 0}.notice strong{color:#e9c98e}.site-header{background:#fff;border-bottom:1px solid #e9edf0;position:sticky;top:0;z-index:10}.header-inner{height:79px;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{display:flex;gap:12px;align-items:center}.brand-mark{width:40px;height:40px;flex:none}.brand span{display:flex;flex-direction:column;gap:2px}.brand strong{letter-spacing:-.45px;font-size:18px;font-weight:800}.brand small{color:#81909d;font-size:11px;letter-spacing:.015em}.desktop-nav{display:flex;gap:30px;font-size:13px;color:#4d6278;font-weight:650}.desktop-nav a:hover{color:var(--green)}.nav-cta{background:var(--navy);color:white;font-size:12px;font-weight:700;letter-spacing:.025em;padding:12px 19px;border-radius:8px;white-space:nowrap}.nav-cta:hover,.primary-button:hover{background:#25446a}.nav-cta span{margin-left:10px}
@@ -270,8 +270,63 @@ button,select,input{min-height:44px}
 
 /* First-screen compactness for phones; disclaimers remain fully readable. */
 @media(max-width:700px){.hero-grid{padding:21px 0 24px!important}.hero h1{font-size:36px!important}.hero .eyebrow{font-size:9px!important}.hero-lead{margin-bottom:13px!important}.hero-foot{margin-top:10px!important}.section{padding-top:25px!important}.section-intro h2{font-size:27px!important}.section-intro p{font-size:12px!important}.help-link{margin-top:7px;padding:9px 11px}.section-intro{margin-bottom:13px!important}}
+</style><meta content="light" name="color-scheme"/><style>/* PayLens 4.0 visual system: accessibility, calm premium hierarchy, guided interaction */
+:root { --v4-violet:#6650e6; --v4-teal:#06a8a2; --v4-ink:#16264e; --v4-border:#dde4f4; }
+body{background:#f4f6fd!important;color:#172447}
+.notice{background:linear-gradient(100deg,#fff4d9,#fff9ec)!important;color:#5b3b19!important;border-bottom:1px solid #f5dca3!important;box-shadow:inset 4px 0 #e7a643}
+.notice strong{color:#9a430d!important;font-weight:900!important}.notice-inner{padding:12px 0!important;font-size:12px}
+.site-header{box-shadow:0 5px 19px rgba(37,36,105,.04);border-color:#e5e9f5!important}
+.brand strong{color:#21254d!important}.brand .pro-word{background:#efeafe;color:#5c4aca;padding:3px 7px;border-radius:8px;font-size:11px}
+.header-demo{background:#fff0d8!important;color:#8c4b16!important;border:1px solid #efdbb5!important}
+.hero{background:radial-gradient(circle at 82% 15%,rgba(115,104,255,.30),transparent 36%),linear-gradient(114deg,#1b1748 0%,#313078 62%,#0f596e 125%)!important}
+.hero-grid{min-height:320px!important}.hero h1{max-width:650px;font-size:clamp(38px,4vw,59px)!important;letter-spacing:-.053em!important}.hero h1 em{color:#9ff4e4!important}.hero-lead{max-width:585px}.hero-disclaimer{margin-top:18px;display:inline-block;background:rgba(255,195,117,.11);color:#fceaca;border:1px solid rgba(255,209,145,.3);border-radius:10px;padding:9px 12px;font-size:11px;line-height:1.6}.hero-disclaimer strong{color:white}
+.hero-foot{gap:15px!important}.hero-art{border-radius:22px!important;box-shadow:0 22px 50px rgba(9,17,48,.2)!important}
+.hero-step{padding:11px 13px!important}.hero-step strong{font-size:14px}.hero-step small{font-size:11px}
+.estimator-section{padding-top:37px!important}.section-intro .overline{color:#6251cf!important}.section-intro h2{color:#202553!important;font-size:clamp(28px,3.1vw,41px)!important}.section-intro p{max-width:660px;font-size:14px!important}
+.experience-switch{display:flex;align-items:center;justify-content:space-between;gap:18px;background:#fff;border:1px solid #e0e5f6;padding:14px 17px;border-radius:19px;box-shadow:0 10px 28px rgba(49,44,128,.04);margin:10px 0 18px}
+.experience-copy{display:flex;align-items:center;gap:13px}.experience-emoji{display:grid;place-items:center;flex:none;width:39px;height:39px;border-radius:12px;background:linear-gradient(130deg,#f3eeff,#e0f6ff);color:#6652dc;font-size:20px}
+.experience-copy>div{display:grid;gap:2px}.experience-copy strong{font-size:13px;color:#242b5e}.experience-copy span:not(.experience-emoji){font-size:11px;color:#687995}
+.mode-switch{display:flex;flex:none;gap:4px;background:#f3f5fc;padding:4px;border:1px solid #e3e8f4;border-radius:13px}.mode-button{padding:10px 16px;font-size:12px;font-weight:800;color:#52617e;background:transparent;border:0;border-radius:10px;white-space:nowrap;min-height:42px}.mode-button.active{background:linear-gradient(120deg,#6252dd,#765ce9);box-shadow:0 5px 15px rgba(95,80,218,.23);color:#fff}.mode-button:hover:not(.active){background:white}
+.input-panel{background:#fff!important}.wizard{position:relative}.wizard-heading{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:6px 0 15px}.wizard-eyebrow{font-size:10px;letter-spacing:.16em;font-weight:900;color:#6354d5}.wizard-count{font-size:11px;font-weight:750;color:#818eab}
+.wizard-progress{display:flex;align-items:center;background:#f7f8ff;border:1px solid #e9ecf9;border-radius:15px;padding:12px 14px;gap:7px;margin-bottom:20px}
+.wizard-dot{display:flex;align-items:center;gap:8px;flex:none;border:none;background:transparent;padding:2px;color:#8390ae;font-size:12px;font-weight:790;min-width:0}
+.wizard-dot span{display:grid;place-items:center;background:#ebedf8;border:1px solid #dfe4f3;color:#637192;border-radius:50%;width:29px;height:29px;font-size:12px;font-weight:900;transition:background .2s}.wizard-dot small{font-size:11px;font-weight:760}
+.wizard-dot.current,.wizard-dot.completed{color:#4e49a2}.wizard-dot.current span{color:white;background:#6656dc;border-color:#6656dc;box-shadow:0 0 0 4px #e9e6ff}.wizard-dot.completed span{color:white;background:#11a799;border-color:#11a799}.wizard-connector{height:2px;background:#dfe5f2;flex:1;min-width:10px}
+.wizard-pane{animation:wizardIn .28s ease}.wizard-pane[hidden]{display:none!important}.wizard-pane h4{margin:3px 0 7px;font-size:20px;color:#242958;letter-spacing:-.035em}.wizard-pane>p{font-size:13px;color:#6d7b94;line-height:1.62;margin:0 0 19px}.wizard-grid{margin-bottom:13px}
+.wizard-pane .field>span{font-size:12px!important}.wizard-pane .field select,.wizard-pane .field input{min-height:55px;font-weight:700;font-size:15px!important;border:1.5px solid #cfdaf3!important;background:#f9faff!important;padding:14px!important;border-radius:14px!important}
+.wizard-help{background:#eff9f7;border:1px solid #d5efe9;color:#26675d;padding:11px 13px;border-radius:11px;font-size:12px;line-height:1.55}.wizard-help:before{content:'ⓘ';font-weight:900;margin-right:8px;color:#149586}
+.wizard-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px;flex-wrap:wrap}.wizard-privacy{color:#71819a;font-size:11px}.wizard-next{border:0;background:linear-gradient(110deg,#6252dd,#8a60e9);color:white;display:inline-flex;align-items:center;justify-content:center;gap:20px;padding:15px 21px;font-size:13px;font-weight:850;border-radius:13px;min-height:49px;box-shadow:0 9px 23px rgba(102,80,219,.18)}.wizard-next:hover{filter:brightness(1.08)}.wizard-back{background:#f3f6fe;color:#53628b;border:1px solid #dfe5f2;padding:13px 17px;border-radius:12px;font-size:13px;font-weight:800;min-height:45px}
+.wizard-complete-symbol{width:49px;height:49px;display:grid;place-items:center;background:#dffaf0;border-radius:16px;color:#008867;font-size:29px;font-weight:850;margin:3px 0 15px}.final-step{padding:7px 0 4px}.wizard-summary{padding:14px;border:1px solid #e4e7f3;background:#fafaff;border-radius:12px;font-size:12px;color:#34416c;font-weight:750;line-height:1.65}
+@keyframes wizardIn{from{opacity:.2;transform:translateY(7px)}to{opacity:1;transform:none}}
+/* Simpler default. Dense modules are available from Expert View or contextual links. */
+body.is-simple .input-panel>details.advanced-options,body.is-simple .input-panel>details.allowances-block,body.is-simple .input-panel>details:not(.payslip-reveal):not(.quick-samples),body.is-simple #reconciliation,body.is-simple #arrears-tracker,body.is-simple #timeline,body.is-simple #explain-my-numbers,body.is-simple #schedule,body.is-simple .arrears-panel{display:none!important}
+body.is-simple .input-panel .form-actions{margin-top:14px}
+body.is-expert .wizard-pane[hidden]{display:block!important}
+body.is-expert .wizard-pane[data-pane="3"],body.is-expert .wizard-progress,body.is-expert .wizard-heading,body.is-expert .wizard-actions,body.is-expert .wizard-help{display:none!important}
+body.is-expert .wizard-pane{padding:0 0 8px;animation:none}
+body.is-expert .wizard-pane h4{font-size:16px;margin:12px 0 3px}
+body.is-expert .wizard-pane>p{font-size:11px;margin:0 0 11px}
+body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
+.result-panel{border-radius:24px!important}
+.result-topline{align-items:center}.big-money{font-variant-numeric:tabular-nums;overflow-wrap:anywhere;white-space:normal!important}
+.result-demo{padding:11px 14px!important}.result-demo strong{font-size:12px!important;letter-spacing:.06em!important}
+.premium-kpi{min-height:160px}.premium-dashboard-top h3{font-size:clamp(25px,2.7vw,31px)!important}
+.more-tools{padding-top:10px;padding-bottom:18px}.more-tools-heading{margin:0 0 18px}.more-tools-heading h2{font-size:clamp(23px,2.8vw,32px);color:#24264e;letter-spacing:-.04em;margin:9px 0 5px}.more-tools-heading p{font-size:13px;color:#77849b;margin:0}
+.tools-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.tool-tile{display:flex;align-items:center;gap:10px;border:1px solid #e3e6f5;background:white;border-radius:18px;min-height:113px;padding:14px;box-shadow:0 8px 26px rgba(54,51,120,.04);transition:transform .2s,border-color .2s}.tool-tile:hover{transform:translateY(-3px);border-color:#aba5e8}.tool-icon{display:grid;place-items:center;flex:none;width:37px;height:37px;border-radius:12px;font-size:18px;font-weight:850}.tool-icon.teal{background:#dcf9f4;color:#008579}.tool-icon.violet{background:#ebe6ff;color:#6852d5}.tool-icon.coral{background:#fff0e9;color:#d76a49}.tool-icon.gold{background:#fff3d6;color:#a36e0e}.tool-tile>span:nth-child(2){min-width:0;flex:1}.tool-tile strong{display:block;font-size:12px;color:#27335d;margin-bottom:4px}.tool-tile small{font-size:10px;color:#7c87a0;line-height:1.45;display:block}.tool-tile b{font-size:17px;color:#918cd1}
+.arrears-journey{padding:20px;margin:0 0 22px;background:linear-gradient(113deg,#f4f2ff,#ecfaf8);border-radius:17px;border:1px solid #e1e1f4}.arrears-journey-title{display:flex;justify-content:space-between;gap:12px;align-items:center}.arrears-journey-title strong{font-size:14px;color:#292a58}.arrears-journey-title span{font-size:11px;color:#77819b}.arrears-meter{height:18px;margin:14px 0 11px;border-radius:50px;overflow:hidden;background:#e4dbff;position:relative}.arrears-paid-bar{width:0%;height:100%;display:block;background:linear-gradient(90deg,#04ab9b,#46cead);border-radius:50px;transition:width .3s}.arrears-meter-legend{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}.arrears-meter-legend span{font-size:11px;color:#61718b;display:flex;align-items:center;gap:5px}.arrears-meter-legend b{color:#283359}.legend-square{width:9px;height:9px;display:inline-block;border-radius:3px}.legend-square.paid{background:#11b09b}.legend-square.balance{background:#987ce6}.arrears-journey p{font-size:11px;margin:13px 0 0;color:#7e89a4}
+/* Clearly tagged mode controls, easy tap targets, navigable 320px layout */
+@media(max-width:1100px){.tools-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool-tile{min-height:90px}}
+@media(max-width:700px){.notice-inner{font-size:11px!important}.hero-grid{padding:26px 0 24px!important;min-height:0!important}.hero h1{font-size:clamp(32px,8vw,41px)!important}.hero-disclaimer{font-size:10px;margin-top:13px}.experience-switch{flex-direction:column;align-items:stretch;margin:8px 0 13px;padding:13px}.mode-switch{display:grid;grid-template-columns:1fr 1fr}.mode-button{width:100%;min-height:43px}.wizard-progress{padding:11px 9px;gap:4px}.wizard-dot{gap:4px}.wizard-dot span{height:27px;width:27px}.wizard-dot small{font-size:10px}.wizard-connector{min-width:2px}.wizard-pane h4{font-size:18px}.wizard-grid{grid-template-columns:1fr!important;gap:13px!important}.wizard-actions{display:grid;grid-template-columns:1fr}.wizard-privacy{order:2;text-align:center}.wizard-actions .wizard-next,.wizard-actions .wizard-back{width:100%;text-align:center}.wizard-pane[data-pane="2"] .wizard-actions{grid-template-columns:1fr 1fr}.wizard-pane[data-pane="2"] .wizard-actions button{padding:12px 9px;white-space:nowrap;font-size:12px}.tools-grid{grid-template-columns:1fr 1fr;gap:9px}.tool-tile{padding:10px;align-items:flex-start;gap:7px;min-height:136px}.tool-tile .tool-icon{width:28px;height:28px;border-radius:9px;font-size:14px}.tool-tile strong{font-size:11px}.tool-tile small{font-size:10px}.tool-tile b{display:none}.more-tools-heading p{font-size:12px}.premium-kpi strong{font-size:21px!important}}
+@media(max-width:370px){.wizard-dot small{font-size:9px}.tools-grid{grid-template-columns:1fr}.tool-tile{min-height:75px}.brand strong{font-size:13px!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.wizard-pane{animation:none}.tool-tile,.arrears-paid-bar,.wizard-dot span{transition:none!important}}
+@media print{.experience-switch,.wizard-progress,.wizard-actions,.more-tools,.hero-disclaimer,.arrears-journey{display:none!important}}
+
+.result-demo span{color:#fff0d5!important;font-weight:620!important}.result-demo strong{color:#ffd48d!important}
+/* Keep the calculator above the fold whenever practical. */
+@media(min-width:701px){.hero-grid{padding:30px 0 35px!important;min-height:0!important}.hero-art{min-height:220px!important}.section-intro{margin-bottom:13px!important}}
+@media(max-width:700px){.hero-disclaimer{display:none!important}.estimator-section{padding-top:18px!important}.section-intro{margin-bottom:10px!important}.section-intro h2{font-size:26px!important;margin:4px 0 0!important}.section-intro p,.section-intro .help-link{display:none!important}.experience-switch{margin:0 0 10px}.experience-copy>div span:not(.experience-emoji){display:none}.input-panel .panel-heading p{display:none}.input-panel .panel-heading{margin-bottom:12px!important}.wizard-progress{margin-bottom:13px}.wizard-pane>p{margin-bottom:13px}}
 </style></head>
-<body>
+<body class="is-simple">
 <a class="skip-link" href="#estimator">Skip to estimator</a>
 <aside aria-label="Important unofficial estimate disclaimer" class="notice" role="note">
 <div class="wrap notice-inner">
@@ -283,9 +338,9 @@ button,select,input{min-height:44px}
 <div class="wrap header-inner">
 <a aria-label="CBA Estimator home" class="brand" href="#top">
 <svg aria-hidden="true" class="brand-mark" fill="none" viewbox="0 0 40 40"><rect fill="#D5B16E" height="40" rx="12" width="40"></rect><path d="M9 29.5L19.5 19L25 24.5L33 16.5" stroke="#102039" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path><path d="M28 16.5H33V21.5" stroke="#102039" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path><path d="M9 11H23" stroke="#102039" stroke-linecap="round" stroke-width="2.6"></path></svg>
-<span><strong>KUSU PayLens <span class="pro-word">PRO</span></strong><small>2025–2029 CBA · independent demo</small></span>
+<span><strong><span>KUSU PayLens <span class="pro-word">4.0</span></span></strong><small>2025–2029 CBA · independent demo</small></span>
 </a>
-<nav aria-label="Main navigation" class="desktop-nav"><a href="#estimator">Calculator</a><a href="#insights">My dashboard</a><a href="#reconciliation">Payslip check</a><a href="#arrears-tracker">Arrears</a><a href="#schedule">Salary table</a></nav>
+<nav aria-label="Main navigation" class="desktop-nav"><a href="#estimator">Calculator</a><a href="#insights">My results</a><a data-expert-link="" href="#arrears-tracker">My arrears</a><a data-expert-link="" href="#explain-my-numbers">How it works</a><a data-expert-link="" href="#schedule">Salary tables</a></nav>
 <span class="header-demo" title="Unofficial demonstration — not an endorsed payroll tool">DEMO · UNOFFICIAL</span>
 <a class="nav-cta" href="#estimator">Calculate now <span aria-hidden="true">→</span></a>
 </div>
@@ -293,37 +348,41 @@ button,select,input{min-height:44px}
 <main id="top">
 <section aria-labelledby="hero-title" class="hero"><div class="wrap hero-grid">
 <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> MADE FOR KUSU MEMBERS · INDEPENDENT DEMO</div>
-<h1 id="hero-title">Your CBA pay, <em>made simple.</em></h1>
-<p class="hero-lead">Choose your grade and notch. See an estimated new salary in seconds, then compare it with your payslip and track possible arrears.</p>
-<div class="hero-actions"><a class="primary-button" href="#estimator">Calculate my pay <span aria-hidden="true">→</span></a><a class="secondary-link" href="#how-it-works">How does it work? <span aria-hidden="true">↗</span></a></div>
-<div class="hero-foot"><span><span class="small-check">✓</span> No signup</span><span><span class="small-check">✓</span> Private calculations</span><span><span class="small-check">✓</span> Easy to check</span></div></div>
+<h1 id="hero-title"><span>Your CBA pay, <em>without the headache.</em></span></h1>
+<p class="hero-lead">A simpler way to understand your new salary, allowances and possible arrears. Three quick steps, then a result you can actually explain.</p>
+<div class="hero-actions"><a class="primary-button" href="#estimator"><span>Start my estimate <span aria-hidden="true">→</span></span></a><a class="secondary-link" href="#how-it-works">How does it work? <span aria-hidden="true">↗</span></a></div>
+<div class="hero-foot"><span><span class="small-check">✓</span> No signup</span><span><span class="small-check">✓</span> Private calculations</span><span><span class="small-check">✓</span> Easy to check</span></div><div class="hero-disclaimer"><strong>Demo · Unofficial estimate.</strong> A guide for conversation, not an approved payslip or union calculation.</div></div>
 <div aria-label="Three simple steps to estimate your salary" class="hero-art"><div class="hero-art-label">THE SIMPLE WAY</div>
 <div class="hero-art-inner"><div class="hero-step"><span>01</span><div><strong>Select grade &amp; notch</strong><small>From your HR records or payslip</small></div></div>
 <div class="hero-step"><span>02</span><div><strong>See your estimate</strong><small>Basic pay, allowances &amp; progression</small></div></div>
 <div class="hero-step"><span>03</span><div><strong>Check your payslip</strong><small>Track differences and payments</small></div></div></div>
 <div class="hero-art-bottom">2025–2029 CBA <b>·</b> Grades 5–15 <b>·</b> 12 notches</div></div>
 </div></section>
-
-
 <section class="section estimator-section" id="estimator">
 <div class="wrap">
-<div class="section-intro"><div><div class="overline"><span class="number-chip">1</span> START HERE · ABOUT 30 SECONDS</div><h2>Let's calculate your pay.</h2><p>Only four details are needed. The result updates automatically as you choose.</p></div><a class="help-link" href="#how-it-works">Not sure where to start? <span aria-hidden="true">↗</span></a></div>
-
-<div class="calculator-grid">
+<div class="section-intro"><div><div class="overline"><span class="number-chip">1</span> START HERE · ABOUT 30 SECONDS</div><h2>Find your numbers in 3 easy steps.</h2><p>No spreadsheets to wrestle with. Just your grade, notch and increment month.</p></div><a class="help-link" href="#how-it-works">Not sure where to start? <span aria-hidden="true">↗</span></a></div>
+<div class="experience-switch"><div class="experience-copy"><span aria-hidden="true" class="experience-emoji">✦</span><div><strong>Choose how much detail you want</strong><span>Start simple. Switch to Expert whenever you need the full breakdown.</span></div></div><div aria-label="Calculator experience" class="mode-switch" role="group"><button aria-pressed="true" class="mode-button active" id="simple-mode" type="button">Simple view</button><button aria-pressed="false" class="mode-button" id="expert-mode" type="button">Expert view</button></div></div><div class="calculator-grid">
 <form autocomplete="off" class="input-panel" id="estimator-form">
-<div class="panel-heading"><span class="panel-icon">1</span><div><h3>Tell us about your grade</h3><p>No account. No upload. Your entered figures stay on this device.</p></div></div>
-<div class="field-grid two-up">
-<label class="field"><span>Staff grade <i title="KUSU grades 5 through 15">ⓘ</i></span><select id="grade" name="grade"></select></label>
-<label class="field"><span>Starting notch · 30 June 2025</span><select id="notch" name="notch"></select></label>
-<label class="field"><span>Your annual increment month</span><select id="incrementMonth" name="incrementMonth"></select></label>
-<label class="field"><span>Month you want to check</span><input id="estimateMonth" max="2029-06" min="2025-07" name="estimateMonth" required="" type="month" value="2026-11"/></label>
-</div><div class="quick-action-bar"><a class="quick-calc-button" href="#estimate-card">See my estimated pay <span aria-hidden="true">→</span></a><span class="live-hint"><span class="live-pulse"></span> Changes calculate instantly</span></div>
+<div class="panel-heading"><span class="panel-icon">1</span><div><h3>This is about your pay.</h3><p>A quick estimate first. More detail only if you need it.</p></div></div><div class="wizard" id="pay-wizard">
+<div class="wizard-heading"><span class="wizard-eyebrow">CALCULATE MY PAY</span><span class="wizard-count" id="wizard-count">Step 1 of 3</span></div>
+<div aria-label="Pay calculator steps" class="wizard-progress" role="group">
+<button aria-current="step" class="wizard-dot current" data-step="1" type="button"><span>1</span><small>My grade</small></button>
+<span aria-hidden="true" class="wizard-connector"></span>
+<button class="wizard-dot" data-step="2" type="button"><span>2</span><small>My increment</small></button>
+<span aria-hidden="true" class="wizard-connector"></span>
+<button class="wizard-dot" data-step="3" type="button"><span>3</span><small>My estimate</small></button>
+</div>
+<div class="wizard-pane" data-pane="1"><h4>First, where are you on the salary scale?</h4><p>Use the grade and notch that applied on <strong>30 June 2025</strong>. If unsure, check your HR record.</p><div class="field-grid two-up wizard-grid" id="wizard-fields-a"><label class="field"><span>Staff grade <i title="KUSU grades 5 through 15">ⓘ</i></span><select id="grade" name="grade"></select></label><label class="field"><span>Starting notch · 30 June 2025</span><select id="notch" name="notch"></select></label></div><div class="wizard-help">Notch means your position within the grade. Notch 1 is the starting point.</div><div class="wizard-actions"><span class="wizard-privacy">🔒 No sign-up or payslip upload</span><button class="wizard-next" data-go="2" type="button">Continue <span aria-hidden="true">→</span></button></div></div>
+<div class="wizard-pane" data-pane="2" hidden=""><h4>When does your salary move up?</h4><p>Choose the month you normally receive your annual increment and the month you want to estimate.</p><div class="field-grid two-up wizard-grid" id="wizard-fields-b"><label class="field"><span>Your annual increment month</span><select id="incrementMonth" name="incrementMonth"></select></label><label class="field"><span>Month you want to check</span><input id="estimateMonth" max="2029-06" min="2025-07" name="estimateMonth" required="" type="month" value="2026-11"/></label></div><div class="wizard-help">Your increment moves down one notch in that month; the July CBA rate moves across to a new salary year.</div><div class="wizard-actions"><button class="wizard-back" data-go="1" type="button">← Back</button><button class="wizard-next" data-go="3" type="button">Show my estimate <span aria-hidden="true">→</span></button></div></div>
+<div class="wizard-pane final-step" data-pane="3" hidden=""><div aria-hidden="true" class="wizard-complete-symbol">✓</div><h4>Your estimate is ready.</h4><p>We've used the signed salary schedule and your choices. Remember: this is a guide, not a certified entitlement.</p><div class="wizard-summary" id="wizard-summary">Your selected details appear here.</div><div class="wizard-actions"><button class="wizard-back" data-go="2" type="button">← Edit my details</button><a class="wizard-next" href="#estimate-card" id="view-my-result">See my pay breakdown ↓</a></div></div>
+</div>
+
 <details class="quick-samples"><summary>Try a sample grade <span aria-hidden="true">⌄</span></summary><div class="example-chooser"><div class="example-title"><strong>Just exploring?</strong><span>These are examples, not your real staff details.</span></div><div aria-label="Example grade shortcuts" class="example-buttons"><button data-example-grade="5" type="button">Grade 5</button><button data-example-grade="8" type="button">Grade 8</button><button data-example-grade="11" type="button">Grade 11</button><button data-example-grade="15" type="button">Grade 15</button></div></div></details>
 <details class="progressive-block payslip-reveal" id="payslip-quick"><summary><span class="summary-icon">▤</span><span><strong>Have your payslip? Compare it</strong><small>Optional · enter what you actually received</small></span><span aria-hidden="true" class="summary-arrow">⌄</span></summary><div class="progressive-body"><div class="quick-payslip" id="quick-payslip">
 <div class="quick-payslip-head"><span class="quick-icon">▤</span><div><strong>What does your payslip say?</strong><p>Optional: enter the <b>basic salary actually paid</b> in your selected pay month. Do not include allowances or deductions.</p></div></div>
 <div class="quick-payslip-actions"><label class="field"><span>Actual basic for selected month (KSh)</span><input aria-describedby="quick-pay-note" id="quickBasic" inputmode="decimal" min="0" placeholder="e.g. 49,288" step="1" type="number"/></label><button class="quick-apply" id="applyQuick" type="button">Apply to this month</button><button class="quick-clear" id="clearQuick" type="button">Clear</button></div>
 <p class="quick-hint" id="quick-pay-note">For historical months, edit the actual figures in the monthly timeline. We do not save or transmit your payslip entries.</p></div></div></details>
-<div class="friendly-tip"><span aria-hidden="true">💡</span></div>
+<div class="friendly-tip"><div><strong>A quick tip:</strong> Use your actual grade and notch. The sample values are only for exploring the calculator.</div></div>
 <details class="advanced-options progressive-block"><summary><span class="summary-icon">✦</span><span><strong>My employment changed</strong><small>Promotions, retirement, when revised pay started</small></span><span class="summary-arrow">⌄</span></summary><div class="progressive-body">
 <div class="mini-head-flex extra-head"><h4>Employment changes &amp; implementation</h4><span class="opt-badge">NEW</span></div>
 <p class="enhancement-intro">Adapted for KUSU staff. These changes can affect both the new grade/notch and how long salary differences accumulate.</p>
@@ -382,7 +441,7 @@ button,select,input{min-height:44px}
 </div></details><div class="form-actions"><button class="reset-button" id="reset" type="button">Reset values</button><span class="autosync"><span></span> Results update instantly</span></div>
 </form>
 <section aria-labelledby="estimate-title" class="result-panel" id="estimate-card">
-<div class="result-status"><span class="status-spark"></span> Your numbers update automatically</div><div class="result-topline"><div class="result-kicker"> LIVE ESTIMATE · STEP 2</div><span class="result-period" id="result-period">Nov 2026</span></div>
+<div class="result-status"><span class="status-spark"></span> Your numbers update automatically</div><div class="result-topline"><div class="result-kicker">YOUR PERSONAL CBA ESTIMATE · UNOFFICIAL</div><span class="result-period" id="result-period">Nov 2026</span></div>
 <p class="result-label" id="estimate-title">Your estimated monthly gross pay</p>
 <div class="big-money" id="gross-result">KSh 0</div>
 <p class="result-sub">Includes your selected basic salary and monthly allowances. Before deductions. Annual leave allowance is shown separately.</p>
@@ -394,7 +453,7 @@ button,select,input{min-height:44px}
 <div><span>Assumed commuter</span><strong id="commuter-result">KSh 18,000</strong></div>
 <div><span>Other allowances</span><strong id="other-result">KSh 0</strong></div>
 </div>
-<div class="result-bottom"><div><small>Annual leave allowance (once per year)</small><strong id="leave-result">KSh 0</strong></div><div><small>Commuter difference / month</small><strong id="commuter-gain-result">KSh 0</strong></div></div><div class="result-context"><strong>Check the assumptions before sharing</strong><p>Commuter uses your selected rate (KSh 18,000 initially), which may be phased. House allowance defaults to zero until you enter it.</p><div class="result-context-actions"><a data-open-panel="allowances" href="#estimator">Adjust my allowances ↗</a><a href="#reconciliation">Compare payslip ↗</a></div></div><p class="result-sub" id="result-employment">Grade and notch can change with the promotion settings.</p>
+<div class="result-bottom"><div><small>Annual leave allowance (once per year)</small><strong id="leave-result">KSh 0</strong></div><div><small>Commuter difference / month</small><strong id="commuter-gain-result">KSh 0</strong></div></div><div class="result-context"><strong>Check the assumptions before sharing</strong><p>Your commuter allowance is initially set to KSh 18,000 as a target assumption; universities may phase this. House allowance starts at zero until you enter yours.</p><div class="result-context-actions"><a data-open-panel="allowances" href="#estimator">Adjust my allowances ↗</a><a href="#reconciliation">Compare payslip ↗</a></div></div><p class="result-sub" id="result-employment">Grade and notch can change with the promotion settings.</p>
 <div aria-live="polite" class="result-net hidden" id="net-results"><h4>Optional November 2026 tax-rule scenario</h4>
 <div class="result-net-big"><span>Estimated take-home pay</span><strong id="net-result">KSh 0</strong></div>
 <div class="result-net-list">
@@ -437,7 +496,12 @@ button,select,input{min-height:44px}
 </article>
 </div>
 <div class="dashboard-bottom"><span class="green-pulse"></span> Everything is calculated locally in your browser. No account, tracking or automatic server submission. <a href="#estimator">Adjust my inputs ↗</a></div>
-</section>
+</section><section aria-labelledby="tools-title" class="more-tools wrap" id="member-tools"><div class="more-tools-heading"><span class="overline">WANT TO GO DEEPER?</span><h2 id="tools-title">We've kept the detailed tools right here.</h2><p>Use the quick estimate first. These extra checks are here when you need them.</p></div><div class="tools-grid">
+<a class="tool-tile" data-expert-link="" href="#reconciliation"><span aria-hidden="true" class="tool-icon teal">▤</span><span><strong>Check my payslip</strong><small>Compare what you received with the salary table.</small></span><b aria-hidden="true">→</b></a>
+<a class="tool-tile" data-expert-link="" href="#arrears-tracker"><span aria-hidden="true" class="tool-icon violet">◷</span><span><strong>Track my arrears</strong><small>See possible differences and record payments.</small></span><b aria-hidden="true">→</b></a>
+<a class="tool-tile" data-expert-link="" href="#explain-my-numbers"><span aria-hidden="true" class="tool-icon coral">?</span><span><strong>Explain my numbers</strong><small>See exactly which grade, notch and rates were used.</small></span><b aria-hidden="true">→</b></a>
+<a class="tool-tile" data-expert-link="" href="#timeline"><span aria-hidden="true" class="tool-icon gold">↗</span><span><strong>See salary progression</strong><small>Follow monthly increments up to June 2029.</small></span><b aria-hidden="true">→</b></a>
+</div></section>
 <section aria-labelledby="recon-heading" class="recon-panel" id="reconciliation">
 <div class="recon-heading"><div><div class="overline">PAYSLIP RECONCILIATION</div><h3 id="recon-heading">Your payslip vs the CBA schedule</h3><p>Compare the selected month’s scheduled basic salary with the amount paid, or the reference assumption if you have not entered a payslip figure.</p></div><span class="recon-status" id="recon-status">Assumed comparator</span></div>
 <div class="recon-grid"><div class="recon-metric"><small>Scheduled basic</small><strong id="recon-due">KSh —</strong><span>Published table rate</span></div><div class="recon-metric"><small>Basic used as paid</small><strong id="recon-actual">KSh —</strong><span id="recon-pay-source">Assumed from salary schedule</span></div><div class="recon-metric standout"><small>Difference this month</small><strong id="recon-delta">KSh —</strong><span id="recon-delta-note">Not a certified debt</span></div></div>
@@ -449,7 +513,7 @@ button,select,input{min-height:44px}
 <p class="caution">The first two cards show the full agreement periods and can include future projections. The highlighted accrued balance counts months up to the current calendar month only, minus payments entered. The additional post-December figure is a separate scenario and NOT proof of amounts owed. Check your payslips and employer records.</p>
 </div>
 <section aria-labelledby="tracker-title" class="tracker-panel" id="arrears-tracker">
-<div class="tracker-head"><div><span class="overline">PAYMENT TRACKER</span><h3 id="tracker-title">Know what has been paid — and what's still estimated.</h3><p>The agreement says 2025/26 arrears will be paid in three equal instalments (individual dates unspecified) and July–December 2026 arrears with January 2027 salary. Enter actual <b>basic arrears payments</b>, not regular salary.</p></div><span class="tracker-mark">NOT A PAYMENT CONFIRMATION</span></div>
+<div class="tracker-head"><div><span class="overline">PAYMENT TRACKER</span><h3 id="tracker-title">Know what has been paid — and what's still estimated.</h3><p>The agreement says 2025/26 arrears will be paid in three equal instalments (individual dates unspecified) and July–December 2026 arrears with January 2027 salary. Enter actual <b>basic arrears payments</b>, not regular salary.</p></div><span class="tracker-mark">NOT A PAYMENT CONFIRMATION</span></div><div aria-label="Illustrative accrued differences and payments" class="arrears-journey" role="group"><div class="arrears-journey-title"><strong>Where do your estimated arrears stand?</strong><span>Updates when you enter payments</span></div><div class="arrears-meter"><span class="arrears-paid-bar" id="arrears-paid-bar"></span></div><div class="arrears-meter-legend"><span><i class="legend-square paid"></i>Payments entered <b id="journey-paid">KSh —</b></span><span><i class="legend-square balance"></i>Unpaid estimated difference <b id="journey-unpaid">KSh —</b></span></div><p>Only differences through the current month are counted here. Future projected differences are not yet arrears.</p></div>
 <div class="tracker-grid"><label class="tracker-item"><span><b>01</b> First 2025/26 instalment</span><small>Illustrative instalment: <strong id="track-due1">KSh —</strong></small><input id="payment1" inputmode="decimal" min="0" placeholder="Amount received (KSh)" step="1" type="number"/></label>
 <label class="tracker-item"><span><b>02</b> Second 2025/26 instalment</span><small>Illustrative instalment: <strong id="track-due2">KSh —</strong></small><input id="payment2" inputmode="decimal" min="0" placeholder="Amount received (KSh)" step="1" type="number"/></label>
 <label class="tracker-item"><span><b>03</b> Third 2025/26 instalment</span><small>Illustrative instalment: <strong id="track-due3">KSh —</strong></small><input id="payment3" inputmode="decimal" min="0" placeholder="Amount received (KSh)" step="1" type="number"/></label>
@@ -489,8 +553,8 @@ button,select,input{min-height:44px}
 </section>
 <section class="bottom-cta"><div class="wrap bottom-inner"><div><div class="overline">READY TO DOUBLE-CHECK?</div><h2>Your payslip is the final check.</h2><p>Use PayLens to prepare your questions, then confirm your numbers with your university and the signed CBA.</p></div><div class="bottom-buttons"><a class="primary-button" href="#estimator">Calculate again →</a><a class="source-link-button" href="./sources/Return-to-Work-Formula-30-Oct-2026.pdf" rel="noopener noreferrer" target="_blank">Read the source PDF ↗</a></div></div></section>
 </main>
-<footer class="site-footer"><div class="wrap footer-grid"><div class="footer-brand"><strong>KUSU PayLens Pro</strong><p>Independent demonstration for Kenyan public university staff. Not a payroll or official union service.</p></div><div class="footer-note"><strong>Demo · Unofficial estimate.</strong><p>Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. <strong>No entered pay data is transmitted automatically. Sharing via WhatsApp sends only the message you choose.</strong> Validate your entitlement with your employer, payslip and the signed CBA documents.</p></div></div><div class="wrap footer-last"><span>Salary sources: 30 October 2026 Return-to-Work Formula · Schedules I &amp; II</span><span>PayLens · v3.0 · 2 November 2026 · Offline-friendly after installation</span></div><div class="wrap footer-credit"><span>Prepared by</span> <strong>Eng Dan Otieno</strong><span class="footer-role">ICT Expert</span></div></footer>
-<nav aria-label="Quick links" class="mobile-dock"><a href="#estimator"><span>⌨</span>Calculate</a><a href="#insights"><span aria-hidden="true">◫</span>My result</a><a href="#arrears-tracker"><span aria-hidden="true">▣</span>Arrears</a><a href="#schedule"><span aria-hidden="true">▦</span>Tables</a></nav>
+<footer class="site-footer"><div class="wrap footer-grid"><div class="footer-brand"><strong>KUSU PayLens 4.0</strong><p>Independent demonstration for Kenyan public university staff. Not a payroll or official union service.</p></div><div class="footer-note"><strong>Demo · Unofficial estimate.</strong><p>Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. <strong>No entered pay data is transmitted automatically. Sharing via WhatsApp sends only the message you choose.</strong> Validate your entitlement with your employer, payslip and the signed CBA documents.</p></div></div><div class="wrap footer-last"><span>Salary sources: 30 October 2026 Return-to-Work Formula · Schedules I &amp; II</span><span>PayLens · v4.0 · 2 November 2026 · Works offline after installation</span></div><div class="wrap footer-credit"><span>Prepared by</span> <strong>Eng Dan Otieno</strong><span class="footer-role">ICT Expert</span></div></footer>
+<nav aria-label="Quick links" class="mobile-dock"><a href="#estimator"><span aria-hidden="true">⌨</span>Calculate</a><a href="#insights"><span aria-hidden="true">◫</span>Results</a><a data-expert-link="" href="#arrears-tracker"><span aria-hidden="true">◷</span>Arrears</a><a href="#member-tools"><span aria-hidden="true">☷</span>More</a></nav>
 <script>const CBA_DATA = {"salary":{"5":{"1":[32485,33622,34799,36017,37278],"2":[33785,35304,36540,37819,39143],"3":[35137,37070,38368,39711,41101],"4":[36543,38924,40287,41698,43158],"5":[38004,40871,42302,43783,45316],"6":[39525,42915,44418,45973,47583],"7":[41106,45061,46639,48272,49962],"8":[42750,47314,48970,50684,52458],"9":[44461,49680,51419,53219,55082],"10":[46239,52164,53990,55880,57836],"11":[48089,54773,56691,58676,60730],"12":[50014,57511,59524,61608,63765]},"6":{"1":[36914,38206,39544,40929,42362],"2":[38392,40117,41522,42976,44481],"3":[39927,42123,43598,45124,46704],"4":[41525,44229,45778,47381,49040],"5":[43186,46441,48067,49750,51492],"6":[44913,48763,50470,52237,54066],"7":[46711,51202,52995,54850,56770],"8":[48580,53763,55645,57593,59609],"9":[50523,56451,58427,60472,62589],"10":[52544,59275,61350,63498,65721],"11":[54647,62239,64418,66673,69007],"12":[56833,65351,67639,70007,72458]},"7":{"1":[42858,44359,45912,47519,49183],"2":[44573,46577,48208,49896,51643],"3":[46357,48906,50618,52390,54224],"4":[48211,51352,53150,55011,56937],"5":[50140,53920,55808,57762,59784],"6":[52147,56616,58598,60649,62772],"7":[54233,59448,61529,63683,65912],"8":[56402,62420,64605,66867,69208],"9":[58660,65542,67836,70211,72669],"10":[61007,68820,71229,73723,76304],"11":[63448,72261,74791,77409,80119],"12":[65986,75874,78530,81279,84124]},"8":{"1":[47621,49288,51014,52800,54648],"2":[49527,51754,53566,55441,57382],"3":[51507,54342,56244,58213,60251],"4":[53568,57060,59058,61126,63266],"5":[55711,59914,62011,64182,66429],"6":[57941,62910,65112,67391,69750],"7":[60259,66056,68368,70761,73238],"8":[62671,69360,71788,74301,76902],"9":[65177,72828,75377,78016,80747],"10":[67785,76470,79147,81918,84786],"11":[70497,80295,83106,86015,89026],"12":[73317,84310,87261,90316,93478]},"9":{"1":[55373,57312,59318,61395,63544],"2":[57588,60177,62284,64464,66721],"3":[59892,63187,65399,67688,70058],"4":[62288,66347,68670,71074,73562],"5":[64779,69665,72104,74628,77240],"6":[67373,73149,75710,78360,81103],"7":[70067,76807,79496,82279,85159],"8":[72870,80648,83471,86393,89417],"9":[75785,84680,87644,90712,93887],"10":[78818,88914,92026,95247,98581],"11":[81971,93361,96629,100012,103513],"12":[85250,98029,101461,105013,108689]},"10":{"1":[63647,65875,68181,70568,73038],"2":[66194,69170,71591,74097,76691],"3":[68843,72629,75172,77804,80528],"4":[71596,76260,78930,81693,84553],"5":[74460,80074,82877,85778,88781],"6":[77439,84079,87022,90068,93221],"7":[80538,88283,91373,94572,97883],"8":[83759,92697,95942,99300,102776],"9":[87110,97333,100740,104266,107916],"10":[90594,102201,105779,109482,113314],"11":[94218,107311,111067,114955,118979],"12":[97988,112678,116622,120704,124929]},"11":{"1":[96006,99367,102845,106445,110171],"2":[99848,104336,107988,111768,115680],"3":[103842,109553,113388,117357,121465],"4":[107996,115031,119058,123226,127539],"5":[112317,120784,125012,129388,133917],"6":[116810,126823,131262,135857,140612],"7":[121482,133165,137826,142650,147643],"8":[126342,139824,144718,149784,155027],"9":[131395,146815,151954,157273,162778],"10":[136653,154157,159553,165138,170918],"11":[142119,161865,167531,173395,179464],"12":[147805,169959,175908,182065,188438]},"12":{"1":[119858,124054,128396,132890,137542],"2":[124653,130256,134815,139534,144418],"3":[129640,136770,141557,146512,151640],"4":[134826,143609,148636,153839,159224],"5":[140220,150790,156068,161531,167185],"6":[145829,158330,163872,169608,175545],"7":[151662,166246,172065,178088,184322],"8":[157729,174559,180669,186993,193538],"9":[164039,183288,189704,196344,203217],"10":[170600,192453,199189,206161,213377],"11":[177425,202076,209149,216470,224047],"12":[184523,212181,219608,227295,235251]},"13":{"1":[136171,140937,145870,150976,156261],"2":[141619,147985,153165,158526,164075],"3":[147284,155384,160823,166452,172278],"4":[153175,163154,168865,174776,180894],"5":[159303,171312,177308,183514,189937],"6":[165676,179877,186173,192690,199435],"7":[172303,188871,195482,202324,209406],"8":[179195,198316,205258,212443,219879],"9":[186365,208232,215521,223065,230873],"10":[193819,218644,226297,234218,242416],"11":[201572,229577,237613,245930,254538],"12":[209636,241056,249493,258226,267264]},"14":{"1":[173864,179950,186249,192768,199515],"2":[180819,188948,195562,202407,209492],"3":[188053,198396,205340,212527,219966],"4":[195574,208316,215608,223155,230966],"5":[203398,218732,226388,234312,242513],"6":[211534,229669,237708,246028,254639],"7":[219995,241153,249594,258330,267372],"8":[228796,253211,262074,271247,280741],"9":[237948,265872,275178,284810,294779],"10":[247467,279167,288938,299051,309518],"11":[257366,293126,303386,314005,324996],"12":[267662,307783,318556,329706,341246]},"15":{"1":[224631,232494,240632,249055,257772],"2":[233616,244119,252664,261508,270661],"3":[242962,256325,265297,274583,284194],"4":[252680,269142,278562,288312,298403],"5":[262789,282599,292490,302728,313324],"6":[273301,296730,307116,317866,328992],"7":[284233,311567,322472,333759,345441],"8":[295604,327145,338596,350447,362713],"9":[307428,343504,355527,367971,380850],"10":[319725,360679,373303,386369,399892],"11":[332515,378714,391969,405688,419888],"12":[345816,397651,411569,425974,440884]}},"leave":{"15":21980,"14":21197,"13":19021,"12":17570,"11":14087,"10":8754,"9":8754,"8":8173,"7":8056,"6":7154,"5":6225}};</script>
 <script>(function () {
   'use strict';
@@ -576,7 +640,7 @@ button,select,input{min-height:44px}
     const first=add(timeline,'2025-07','2026-06');
     const second=add(timeline,'2026-07','2026-12');
     const late=add(timeline,'2027-01','2029-06');
-    const now=new Date(),currentMonth=strMonth(now.getFullYear(),now.getMonth()+1);
+    const parts=Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Nairobi',year:'numeric',month:'2-digit'}).formatToParts(new Date()); const currentMonth=parts.find(v=>v.type==='year').value+'-'+parts.find(v=>v.type==='month').value;
     const asOf=currentMonth<'2025-07'?'2025-07':currentMonth>'2029-06'?'2029-06':currentMonth;
     const accrued=add(timeline,'2025-07',asOf);
     const tracked=trackerIDs.reduce((sum,id)=>sum+plainNumber($(id).value),0);
@@ -702,7 +766,7 @@ button,select,input{min-height:44px}
   $('shareSafe').addEventListener('click',()=>{
     const r=lastResult;if(!r)return;
     const figures=$('shareFigures').checked;
-    const title='KUSU PayLens Pro — 2025–2029 CBA estimate (unofficial demo).';
+    const title='KUSU PayLens 4.0 — 2025–2029 CBA estimate (unofficial demo).';
     const publicLink=/^https?:$/.test(location.protocol)?location.href.split('#')[0]:'';
     let msg=title+'\nAn independent tool to explore KUSU CBA basic pay and possible arrears. Please verify with your university, payslip and the signed CBA.';
     if(figures){msg+=`\nMy selected month: ${r.selected.dateKey}; Grade ${r.selected.grade}, Notch ${r.selected.notch}. Scheduled gross ${currency(r.gross)}; illustrative accrued basic arrears balance ${currency(r.total)}.`;}
@@ -887,7 +951,7 @@ Estimates only. Allowance arrears and tax on arrears excluded.`;
 })();
 </script>
 <section aria-label="Personal estimate report" class="print-report" id="print-report">
-<header class="print-head"><div><strong>KUSU PayLens Pro</strong><h1>Personal CBA pay estimate</h1><p>Independent, unofficial salary and arrears illustration</p></div><span>DEMO · UNOFFICIAL</span></header>
+<header class="print-head"><div><strong>KUSU PayLens 4.0</strong><h1>Personal CBA pay estimate</h1><p>Independent, unofficial salary and arrears illustration</p></div><span>DEMO · UNOFFICIAL</span></header>
 <div class="print-alert"><b>Demo · Unofficial estimate.</b> Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. Validate your entitlement with your employer, payslip and the signed CBA documents.</div>
 <table class="print-metrics"><tbody id="print-metrics-body"></tbody></table>
 <h2>Calculation explanation</h2><p id="print-method"></p>
@@ -925,6 +989,74 @@ Estimates only. Allowance arrears and tax on arrears excluded.`;
    },{rootMargin:'-15% 0px -70% 0px'});
    watch.forEach(el=>ob.observe(el));
  }
+})();
+</script><script>/* Progressive enhancement for the guided experience. No storage, network requests, or tracking. */
+(function(){
+  'use strict';
+  const $=id=>document.getElementById(id);
+  const page=document.body;
+  const inputs=$('estimator-form');
+  const panes=[...document.querySelectorAll('.wizard-pane')];
+  const dots=[...document.querySelectorAll('.wizard-dot')];
+  const allExpert=[...document.querySelectorAll('[data-expert-link]')];
+  let mode='simple',step=1;
+  function applyWizard(next,{focus=false}={}){
+    step=Math.max(1,Math.min(3,Number(next)||1));
+    panes.forEach(p=>{p.hidden=Number(p.dataset.pane)!==step;});
+    dots.forEach((b,i)=>{
+      const s=i+1;
+      b.classList.toggle('current',s===step);b.classList.toggle('completed',s<step);
+      if(s===step)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');
+      b.setAttribute('aria-label',`Step ${s}: ${b.querySelector('small').textContent}`);
+    });
+    $('wizard-count').textContent=`Step ${step} of 3`;
+    $('estimate-card').querySelector('.result-kicker').textContent= step===3 ? 'YOUR CBA PAY ESTIMATE · DEMO' : 'LIVE EXAMPLE · CHOOSE YOUR DETAILS FIRST';
+    if(step===3){
+      const grade=$('grade').value, notch=$('notch').value, inc=$('incrementMonth');
+      $('wizard-summary').textContent=`Grade ${grade}, starting Notch ${notch} · ${inc.selectedOptions[0].text} increment · Estimated month ${$('estimateMonth').value}.`;
+    }
+    if(focus && mode==='simple'){
+      const title=panes[step-1].querySelector('h4');title.setAttribute('tabindex','-1');title.focus({preventScroll:true});
+    }
+  }
+  function setMode(next){
+    mode=next==='expert'?'expert':'simple';
+    page.classList.toggle('is-expert',mode==='expert');page.classList.toggle('is-simple',mode==='simple');
+    const simple=$('simple-mode'),expert=$('expert-mode');
+    simple.classList.toggle('active',mode==='simple');expert.classList.toggle('active',mode==='expert');
+    simple.setAttribute('aria-pressed',String(mode==='simple'));expert.setAttribute('aria-pressed',String(mode==='expert'));
+    // Wizard panes remain in DOM for the calculator engine; Expert CSS shows both groups of fields.
+    if(mode==='simple')applyWizard(step);
+  }
+  $('simple-mode').addEventListener('click',()=>setMode('simple'));
+  $('expert-mode').addEventListener('click',()=>setMode('expert'));
+  document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>{
+    applyWizard(b.dataset.go,{focus:true});
+    if(Number(b.dataset.go)===3 && window.innerWidth<900){
+      $('estimate-card').scrollIntoView({block:'start',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+    }
+  }));
+  dots.forEach(b=>b.addEventListener('click',()=>applyWizard(b.dataset.step,{focus:true})));
+  for(const id of ['grade','notch','incrementMonth','estimateMonth']){
+    $(id).addEventListener('change',()=>{if(step===3)applyWizard(3);});
+  }
+  allExpert.forEach(a=>a.addEventListener('click',()=>setMode('expert')));
+  document.querySelectorAll('[data-open-panel="allowances"]').forEach(a=>a.addEventListener('click',()=>setMode('expert')));
+  // Reset does not clear personal data on a server (there is none). Return to the first guidance step.
+  $('reset').addEventListener('click',()=>{step=1;setMode('simple');applyWizard(1);});
+  function updateJourney(){
+    const getN=id=>Number((($(id)||{}).textContent||'').replace(/[^0-9.-]/g,''))||0;
+    const paid=getN('track-paid');const accrued=getN('track-accrued');
+    const denom=Math.max(accrued,paid,1);
+    $('arrears-paid-bar').style.width=(100*Math.min(1,Math.max(0,paid/denom))).toFixed(2)+'%';
+    $('journey-paid').textContent=$('track-paid').textContent;
+    $('journey-unpaid').textContent='KSh '+Math.max(0,Math.round(accrued-paid)).toLocaleString('en-KE');
+    $('arrears-paid-bar').parentElement.setAttribute('aria-label',`Estimated accrued basic salary differences ${$('track-accrued').textContent}; payments entered ${$('track-paid').textContent}`);
+  }
+  new MutationObserver(updateJourney).observe($('track-accrued'),{subtree:true,childList:true,characterData:true});
+  new MutationObserver(updateJourney).observe($('track-paid'),{subtree:true,childList:true,characterData:true});
+  updateJourney();
+  setMode('simple');applyWizard(1);
 })();
 </script></body>
 </html>
