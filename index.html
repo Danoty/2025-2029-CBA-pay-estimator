@@ -7,9 +7,9 @@
 <meta content="#10243b" name="theme-color"/>
 <meta content="Eng Dan Otieno — ICT Expert" name="author"/>
 <meta content="Easy three-step KUSU 2025–2029 CBA pay calculator. Check Grades 5–15, diagonal increments, monthly basic salary, commuter and leave allowances, and illustrative arrears. Independent, unofficial estimate." name="description"/>
-<meta content="KUSU PayLens 4.0 · Your CBA pay, made simple" property="og:title"/>
+<meta content="KUSU PayLens 4.1 · Your CBA pay, made simple" property="og:title"/>
 <meta content="Estimate your KUSU CBA pay in three simple steps. Independent demo by Eng Dan Otieno | ICT Expert." property="og:description"/>
-<title>KUSU PayLens 4.0 | Simple CBA Pay Calculator · Independent Demo</title>
+<title>KUSU PayLens 4.1 | Simple CBA Pay Calculator · Independent Demo</title>
 <style>:root{--navy:#13243d;--navy2:#0e1b2f;--ink:#192b41;--muted:#68788a;--line:#e2e8ec;--canvas:#f5f7f8;--paper:#fff;--gold:#d4ad71;--goldlight:#f8efdf;--green:#18765f;--greenlight:#eaf4f0;--shadow:0 24px 64px rgba(13,31,51,.07)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:96px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--canvas);font-size:15px;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #d4ad71;outline-offset:3px}a{color:inherit;text-decoration:none}a:hover{text-decoration:none}p{line-height:1.7}.wrap{width:min(1200px,calc(100% - 48px));margin:auto}.skip-link{position:absolute;top:-100px;left:10px;background:white;padding:12px;z-index:100}.skip-link:focus{top:10px}
 .notice{background:#10213a;color:#dfe5ee;font-size:12px;line-height:1.65;letter-spacing:.012em}.notice-inner{padding:9px 0}.notice strong{color:#e9c98e}.site-header{background:#fff;border-bottom:1px solid #e9edf0;position:sticky;top:0;z-index:10}.header-inner{height:79px;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{display:flex;gap:12px;align-items:center}.brand-mark{width:40px;height:40px;flex:none}.brand span{display:flex;flex-direction:column;gap:2px}.brand strong{letter-spacing:-.45px;font-size:18px;font-weight:800}.brand small{color:#81909d;font-size:11px;letter-spacing:.015em}.desktop-nav{display:flex;gap:30px;font-size:13px;color:#4d6278;font-weight:650}.desktop-nav a:hover{color:var(--green)}.nav-cta{background:var(--navy);color:white;font-size:12px;font-weight:700;letter-spacing:.025em;padding:12px 19px;border-radius:8px;white-space:nowrap}.nav-cta:hover,.primary-button:hover{background:#25446a}.nav-cta span{margin-left:10px}
@@ -322,9 +322,15 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
 @media print{.experience-switch,.wizard-progress,.wizard-actions,.more-tools,.hero-disclaimer,.arrears-journey{display:none!important}}
 
 .result-demo span{color:#fff0d5!important;font-weight:620!important}.result-demo strong{color:#ffd48d!important}
-/* Keep the calculator above the fold whenever practical. */
-@media(min-width:701px){.hero-grid{padding:30px 0 35px!important;min-height:0!important}.hero-art{min-height:220px!important}.section-intro{margin-bottom:13px!important}}
-@media(max-width:700px){.hero-disclaimer{display:none!important}.estimator-section{padding-top:18px!important}.section-intro{margin-bottom:10px!important}.section-intro h2{font-size:26px!important;margin:4px 0 0!important}.section-intro p,.section-intro .help-link{display:none!important}.experience-switch{margin:0 0 10px}.experience-copy>div span:not(.experience-emoji){display:none}.input-panel .panel-heading p{display:none}.input-panel .panel-heading{margin-bottom:12px!important}.wizard-progress{margin-bottom:13px}.wizard-pane>p{margin-bottom:13px}}
+</style><style>
+.notch-basis-field {display:block;margin:0 0 16px;}
+.notch-basis-field select{width:100%;min-height:48px;border:2px solid #0f8c91;border-radius:12px;background:#f0fdfa;color:#083c53;font-weight:700;padding:10px;max-width:100%;}
+.notch-clarity{margin:16px 0;padding:14px 16px;border:1px solid #94e1db;background:#ecfffa;color:#0b4a46;border-radius:13px;font-size:.92rem;line-height:1.55;font-weight:600}
+body.notch-current [data-history-only],body.notch-current a[href="#arrears-tracker"],body.notch-current a[href="#timeline"]{display:none!important}
+body.notch-current #increment-month-field{display:none!important}
+.notch-current .tracker-panel,.notch-current .arrears-panel,body.notch-current .advanced-options {display:none!important}
+body.notch-current #wizard-fields-b{grid-template-columns:minmax(0,1fr)}
+@media (prefers-color-scheme:dark){.notch-clarity{background:#123c43;color:#e2fdfa;border-color:#2b7b79}}
 </style></head>
 <body class="is-simple">
 <a class="skip-link" href="#estimator">Skip to estimator</a>
@@ -338,7 +344,7 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
 <div class="wrap header-inner">
 <a aria-label="CBA Estimator home" class="brand" href="#top">
 <svg aria-hidden="true" class="brand-mark" fill="none" viewbox="0 0 40 40"><rect fill="#D5B16E" height="40" rx="12" width="40"></rect><path d="M9 29.5L19.5 19L25 24.5L33 16.5" stroke="#102039" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path><path d="M28 16.5H33V21.5" stroke="#102039" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path><path d="M9 11H23" stroke="#102039" stroke-linecap="round" stroke-width="2.6"></path></svg>
-<span><strong><span>KUSU PayLens <span class="pro-word">4.0</span></span></strong><small>2025–2029 CBA · independent demo</small></span>
+<span><strong><span>KUSU PayLens <span class="pro-word">4.1</span></span></strong><small>2025–2029 CBA · independent demo</small></span>
 </a>
 <nav aria-label="Main navigation" class="desktop-nav"><a href="#estimator">Calculator</a><a href="#insights">My results</a><a data-expert-link="" href="#arrears-tracker">My arrears</a><a data-expert-link="" href="#explain-my-numbers">How it works</a><a data-expert-link="" href="#schedule">Salary tables</a></nav>
 <span class="header-demo" title="Unofficial demonstration — not an endorsed payroll tool">DEMO · UNOFFICIAL</span>
@@ -360,7 +366,7 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
 </div></section>
 <section class="section estimator-section" id="estimator">
 <div class="wrap">
-<div class="section-intro"><div><div class="overline"><span class="number-chip">1</span> START HERE · ABOUT 30 SECONDS</div><h2>Find your numbers in 3 easy steps.</h2><p>No spreadsheets to wrestle with. Just your grade, notch and increment month.</p></div><a class="help-link" href="#how-it-works">Not sure where to start? <span aria-hidden="true">↗</span></a></div>
+<div class="section-intro"><div><div class="overline"><span class="number-chip">1</span> START HERE · ABOUT 30 SECONDS</div><h2>Find your numbers in 3 easy steps.</h2><p>No spreadsheets to wrestle with. Just your grade, notch and the month you want to check.</p></div><a class="help-link" href="#how-it-works">Not sure where to start? <span aria-hidden="true">↗</span></a></div>
 <div class="experience-switch"><div class="experience-copy"><span aria-hidden="true" class="experience-emoji">✦</span><div><strong>Choose how much detail you want</strong><span>Start simple. Switch to Expert whenever you need the full breakdown.</span></div></div><div aria-label="Calculator experience" class="mode-switch" role="group"><button aria-pressed="true" class="mode-button active" id="simple-mode" type="button">Simple view</button><button aria-pressed="false" class="mode-button" id="expert-mode" type="button">Expert view</button></div></div><div class="calculator-grid">
 <form autocomplete="off" class="input-panel" id="estimator-form">
 <div class="panel-heading"><span class="panel-icon">1</span><div><h3>This is about your pay.</h3><p>A quick estimate first. More detail only if you need it.</p></div></div><div class="wizard" id="pay-wizard">
@@ -372,8 +378,8 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
 <span aria-hidden="true" class="wizard-connector"></span>
 <button class="wizard-dot" data-step="3" type="button"><span>3</span><small>My estimate</small></button>
 </div>
-<div class="wizard-pane" data-pane="1"><h4>First, where are you on the salary scale?</h4><p>Use the grade and notch that applied on <strong>30 June 2025</strong>. If unsure, check your HR record.</p><div class="field-grid two-up wizard-grid" id="wizard-fields-a"><label class="field"><span>Staff grade <i title="KUSU grades 5 through 15">ⓘ</i></span><select id="grade" name="grade"></select></label><label class="field"><span>Starting notch · 30 June 2025</span><select id="notch" name="notch"></select></label></div><div class="wizard-help">Notch means your position within the grade. Notch 1 is the starting point.</div><div class="wizard-actions"><span class="wizard-privacy">🔒 No sign-up or payslip upload</span><button class="wizard-next" data-go="2" type="button">Continue <span aria-hidden="true">→</span></button></div></div>
-<div class="wizard-pane" data-pane="2" hidden=""><h4>When does your salary move up?</h4><p>Choose the month you normally receive your annual increment and the month you want to estimate.</p><div class="field-grid two-up wizard-grid" id="wizard-fields-b"><label class="field"><span>Your annual increment month</span><select id="incrementMonth" name="incrementMonth"></select></label><label class="field"><span>Month you want to check</span><input id="estimateMonth" max="2029-06" min="2025-07" name="estimateMonth" required="" type="month" value="2026-11"/></label></div><div class="wizard-help">Your increment moves down one notch in that month; the July CBA rate moves across to a new salary year.</div><div class="wizard-actions"><button class="wizard-back" data-go="1" type="button">← Back</button><button class="wizard-next" data-go="3" type="button">Show my estimate <span aria-hidden="true">→</span></button></div></div>
+<div class="wizard-pane" data-pane="1"><h4>First, where are you on the salary scale?</h4><p id="wizard-basis-help">Most members know their <strong>current notch</strong>. Choose that for a quick salary check. For historical arrears, choose your notch at 30 June 2025 instead.</p><label class="field notch-basis-field" for="notchBasis"><span>What notch are you entering?</span><select id="notchBasis" name="notchBasis"><option value="current" selected>My notch in the month I am checking (quick)</option><option value="start">My notch on 30 June 2025 (for arrears)</option></select></label><div class="field-grid two-up wizard-grid" id="wizard-fields-a"><label class="field"><span>Staff grade <i title="KUSU grades 5 through 15">ⓘ</i></span><select id="grade" name="grade"></select></label><label class="field"><span id="notch-field-label">My notch in the selected month</span><select id="notch" name="notch"></select></label></div><div class="wizard-help" id="notch-basis-note"><b>Quick mode:</b> entering Notch 3 calculates Notch 3 — no automatic extra notches. Historical arrears are not calculated in quick mode.</div><div class="wizard-actions"><span class="wizard-privacy">🔒 No sign-up or payslip upload</span><button class="wizard-next" data-go="2" type="button">Continue <span aria-hidden="true">→</span></button></div></div>
+<div class="wizard-pane" data-pane="2" hidden=""><h4>Which month would you like to check?</h4><p id="step2-basis-help">Quick salary lookup: choose a month. No automatic increments are added to the notch you selected.</p><div class="field-grid two-up wizard-grid" id="wizard-fields-b"><label class="field" id="increment-month-field"><span>Your annual increment month</span><select id="incrementMonth" name="incrementMonth"></select></label><label class="field"><span>Month you want to check</span><input id="estimateMonth" max="2029-06" min="2025-07" name="estimateMonth" required="" type="month" value="2026-11"/></label></div><div class="wizard-help" id="step2-progress-help">The calculator uses the exact selected notch in quick mode. Historical mode moves one notch on each increment anniversary.</div><div class="wizard-actions"><button class="wizard-back" data-go="1" type="button">← Back</button><button class="wizard-next" data-go="3" type="button">Show my estimate <span aria-hidden="true">→</span></button></div></div>
 <div class="wizard-pane final-step" data-pane="3" hidden=""><div aria-hidden="true" class="wizard-complete-symbol">✓</div><h4>Your estimate is ready.</h4><p>We've used the signed salary schedule and your choices. Remember: this is a guide, not a certified entitlement.</p><div class="wizard-summary" id="wizard-summary">Your selected details appear here.</div><div class="wizard-actions"><button class="wizard-back" data-go="2" type="button">← Edit my details</button><a class="wizard-next" href="#estimate-card" id="view-my-result">See my pay breakdown ↓</a></div></div>
 </div>
 
@@ -447,8 +453,8 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
 <p class="result-sub">Includes your selected basic salary and monthly allowances. Before deductions. Annual leave allowance is shown separately.</p>
 <div class="result-demo" role="note"><strong>DEMO · UNOFFICIAL ESTIMATE</strong><span>Illustration only. Your actual grade, notch, allowances and payslips determine the correct amount.</span></div>
 <div class="hero-rule"></div>
-<div class="result-split"><div><span>New basic salary</span><strong id="basic-result">KSh 0</strong></div><div><span>Selected notch</span><strong id="notch-result">—</strong></div></div>
-<div class="result-lines">
+<div class="result-split"><div><span>New basic salary</span><strong id="basic-result">KSh 0</strong></div><div><span>Notch used for this pay month</span><strong id="notch-result">—</strong></div></div>
+<p id="notch-clarity" role="status" aria-live="polite" class="notch-clarity">Your selected notch and the notch used in this month will be explained here.</p><div class="result-lines">
 <div><span>House allowance</span><strong id="house-result">KSh 0</strong></div>
 <div><span>Assumed commuter</span><strong id="commuter-result">KSh 18,000</strong></div>
 <div><span>Other allowances</span><strong id="other-result">KSh 0</strong></div>
@@ -476,7 +482,7 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
 <div class="premium-kpis">
 <article class="premium-kpi kpi-gross"><div class="kpi-top"><span>Monthly gross estimate</span><span aria-hidden="true" class="kpi-symbol">↗</span></div><strong id="dash-gross">KSh —</strong><small>Basic + selected monthly allowances</small><div aria-hidden="true" class="kpi-decor"></div></article>
 <article class="premium-kpi kpi-basic"><div class="kpi-top"><span>Scheduled basic pay</span><span aria-hidden="true" class="kpi-symbol">◈</span></div><strong id="dash-basic">KSh —</strong><small id="dash-grade">Grade 8 · Notch 1</small><div aria-hidden="true" class="kpi-decor"></div></article>
-<article class="premium-kpi kpi-arrears"><div class="kpi-top"><span>Potential basic arrears balance</span><span aria-hidden="true" class="kpi-symbol">⌁</span></div><strong id="dash-arrears">KSh —</strong><small>Scenario only · depends on actual payments</small><div aria-hidden="true" class="kpi-decor"></div></article>
+<article class="premium-kpi kpi-arrears" data-history-only=""><div class="kpi-top"><span>Potential basic arrears balance</span><span aria-hidden="true" class="kpi-symbol">⌁</span></div><strong id="dash-arrears">KSh —</strong><small>Scenario only · depends on actual payments</small><div aria-hidden="true" class="kpi-decor"></div></article>
 <article class="premium-kpi kpi-leave"><div class="kpi-top"><span>Annual leave allowance</span><span aria-hidden="true" class="kpi-symbol">✳</span></div><strong id="dash-leave">KSh —</strong><small>Once yearly · excluded from monthly gross</small><div aria-hidden="true" class="kpi-decor"></div></article>
 </div>
 <div class="premium-visual-row">
@@ -507,12 +513,12 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
 <div class="recon-grid"><div class="recon-metric"><small>Scheduled basic</small><strong id="recon-due">KSh —</strong><span>Published table rate</span></div><div class="recon-metric"><small>Basic used as paid</small><strong id="recon-actual">KSh —</strong><span id="recon-pay-source">Assumed from salary schedule</span></div><div class="recon-metric standout"><small>Difference this month</small><strong id="recon-delta">KSh —</strong><span id="recon-delta-note">Not a certified debt</span></div></div>
 <div class="recon-foot"><span aria-hidden="true">ⓘ</span> Enter your actual basic in the quick payslip field above, or edit individual months below, to replace assumed figures. This compares <b>basic salary only</b>.</div>
 </section>
-<div class="arrears-panel">
+<div class="arrears-panel" data-history-only="">
 <div class="arrears-heading"><div><div class="overline">BASIC-SALARY ARREARS</div><h3>Potential arrears, broken down.</h3><p>Calculated month by month against the 2024/25 reference scale at each applicable notch, unless you enter actual basic pay in the timeline below.</p></div><div class="due-caveat">Illustrative only <span aria-hidden="true">✳</span></div></div>
 <div class="arrears-cards"><div class="arrears-card"><small>01 · Jul 2025–Jun 2026</small><strong id="arrears-first">KSh 0</strong><span>12-month basic difference</span></div><div class="arrears-card"><small>02 · Jul–Dec 2026</small><strong id="arrears-second">KSh 0</strong><span>6-month basic difference</span></div><div class="arrears-card featured"><small>Estimated accrued balance to current month</small><strong id="arrears-total">KSh 0</strong><span>Accrued basic differences minus payments entered; excludes future months and allowance arrears</span></div></div><div class="arrears-extra"><div><strong>Additional basic difference after Dec 2026</strong><br/><span>Only if your entered implementation date is later than January 2027, capped at last month worked / Jun 2029</span></div><strong id="arrears-late">KSh 0</strong></div>
 <p class="caution">The first two cards show the full agreement periods and can include future projections. The highlighted accrued balance counts months up to the current calendar month only, minus payments entered. The additional post-December figure is a separate scenario and NOT proof of amounts owed. Check your payslips and employer records.</p>
 </div>
-<section aria-labelledby="tracker-title" class="tracker-panel" id="arrears-tracker">
+<section aria-labelledby="tracker-title" class="tracker-panel" id="arrears-tracker" data-history-only="">
 <div class="tracker-head"><div><span class="overline">PAYMENT TRACKER</span><h3 id="tracker-title">Know what has been paid — and what's still estimated.</h3><p>The agreement says 2025/26 arrears will be paid in three equal instalments (individual dates unspecified) and July–December 2026 arrears with January 2027 salary. Enter actual <b>basic arrears payments</b>, not regular salary.</p></div><span class="tracker-mark">NOT A PAYMENT CONFIRMATION</span></div><div aria-label="Illustrative accrued differences and payments" class="arrears-journey" role="group"><div class="arrears-journey-title"><strong>Where do your estimated arrears stand?</strong><span>Updates when you enter payments</span></div><div class="arrears-meter"><span class="arrears-paid-bar" id="arrears-paid-bar"></span></div><div class="arrears-meter-legend"><span><i class="legend-square paid"></i>Payments entered <b id="journey-paid">KSh —</b></span><span><i class="legend-square balance"></i>Unpaid estimated difference <b id="journey-unpaid">KSh —</b></span></div><p>Only differences through the current month are counted here. Future projected differences are not yet arrears.</p></div>
 <div class="tracker-grid"><label class="tracker-item"><span><b>01</b> First 2025/26 instalment</span><small>Illustrative instalment: <strong id="track-due1">KSh —</strong></small><input id="payment1" inputmode="decimal" min="0" placeholder="Amount received (KSh)" step="1" type="number"/></label>
 <label class="tracker-item"><span><b>02</b> Second 2025/26 instalment</span><small>Illustrative instalment: <strong id="track-due2">KSh —</strong></small><input id="payment2" inputmode="decimal" min="0" placeholder="Amount received (KSh)" step="1" type="number"/></label>
@@ -521,7 +527,7 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
 <div class="tracker-totals"><div><small>Basic differences accrued through <span id="track-asof">now</span></small><strong id="track-accrued">KSh —</strong></div><div><small>Payments entered (including other paid)</small><strong id="track-paid">KSh —</strong></div><div class="tracker-balance"><small>Estimated balance to date</small><strong id="track-balance">KSh —</strong></div></div>
 <p class="tracker-legal"><b>Important:</b> Instalment amounts shown above are mathematical splits of the estimated first-period arrears, not confirmed payslip or employer payment figures. Only actual payments you enter reduce the accrued balance; no entries are automatically transmitted.</p>
 </section>
-<div class="timeline-panel" id="timeline">
+<div class="timeline-panel" id="timeline" data-history-only="">
 <div class="timeline-title"><div><div class="overline">THE DIAGONAL JOURNEY</div><h3>See every notch change.</h3><p>July moves across to the new salary year. Your increment month moves you one notch down, up to Notch 12.</p></div><div class="button-group"><button class="outline-button" id="exportCsv" type="button">Export CSV ↗</button></div></div>
 <div class="chart-shell"><div class="chart-head"><strong>Scheduled monthly basic pay</strong><span>July 2025 — June 2029</span></div><div aria-label="Line graph of estimated basic salary over the 2025–2029 period" id="progress-chart" role="img"></div></div>
 <div class="timeline-controls"><label for="timelineFilter">Show</label><select id="timelineFilter"><option value="arrears">Arrears period · Jul 2025–Dec 2026</option><option value="all">Full CBA period · Jul 2025–Jun 2029</option></select><small>Edit <strong>actual basic received</strong> to improve the arrears estimate.</small></div>
@@ -539,13 +545,13 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
 </section>
 <section class="section explain-section" id="how-it-works">
 <div class="wrap"><div class="section-intro"><div><div class="overline">UNDERSTANDING THE NUMBERS</div><h2>How the estimator works.</h2><p>A transparent explanation of what it calculates — and where it stops.</p></div><span class="section-count">03 / 03</span></div>
-<div class="explain-grid"><article class="explain-card"><span class="explain-index">01</span><h3>Start at 30 June 2025</h3><p>Choose your grade and the notch you had on 30 June 2025. This is the starting position for the timeline.</p></article><article class="explain-card"><span class="explain-index">02</span><h3>Move across each July</h3><p>Each July, the model uses the next annual column in the published salary schedule (the negotiated 3.5% rate revision).</p></article><article class="explain-card"><span class="explain-index">03</span><h3>Move down on your anniversary</h3><p>In your chosen increment month, the notch advances by one, up to the table maximum of 12. July increments apply alongside July's new rate.</p></article><article class="explain-card"><span class="explain-index">04</span><h3>Compare with actual pay</h3><p>The model estimates monthly basic differences. Replace its reference amounts with what your payslip actually shows for better estimates.</p></article></div>
+<div class="explain-grid"><article class="explain-card"><span class="explain-index">01</span><h3>Choose the right notch basis</h3><p>Quick mode uses your selected notch for the month you check, with no extra increments. Historical mode starts from the notch held on 30 June 2025 and tracks annual progression for arrears.</p></article><article class="explain-card"><span class="explain-index">02</span><h3>Move across each July</h3><p>Each July, the model uses the next annual column in the published salary schedule (the negotiated 3.5% rate revision).</p></article><article class="explain-card"><span class="explain-index">03</span><h3>Move down on your anniversary</h3><p>In your chosen increment month, the notch advances by one, up to the table maximum of 12. July increments apply alongside July's new rate.</p></article><article class="explain-card"><span class="explain-index">04</span><h3>Compare with actual pay</h3><p>The model estimates monthly basic differences. Replace its reference amounts with what your payslip actually shows for better estimates.</p></article></div>
 <div class="explain-disclaimer" role="note"><div aria-hidden="true" class="explain-disclaimer-icon">!</div><div><strong>Demo · Unofficial estimate.</strong><p>Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. <b>No entered pay data is transmitted automatically. Sharing via WhatsApp sends only the message you choose.</b> Validate your entitlement with your employer, payslip and the signed CBA documents.</p></div></div><div class="sources-links"><a class="source-pdf" href="./sources/Return-to-Work-Formula-30-Oct-2026.pdf" rel="noopener noreferrer" target="_blank">📄 View signed Return-to-Work Formula (PDF) ↗</a><a href="https://www.kra.go.ke/individual/filing-paying/types-of-taxes/paye" rel="noopener noreferrer" target="_blank">KRA PAYE bands ↗</a><a href="https://www.kra.go.ke/news-center/public-notices/2099-collection-of-the-affordable-housing-levy-by-kenya-revenue-authority" rel="noopener noreferrer" target="_blank">KRA Housing Levy ↗</a><a href="https://www.nssf.or.ke/notice-to-employers-year-4-2026-nssf-contribution-rates" rel="noopener noreferrer" target="_blank">NSSF 2026 notice ↗</a><a href="https://sha.go.ke/" rel="noopener noreferrer" target="_blank">SHA / SHIF ↗</a></div>
 <div class="faq-grid"><div class="faq-intro"><h3>Important things to know.</h3><p>Read these before sharing or relying on your results.</p></div><div class="faq-list">
 <details open=""><summary>Does this calculate net pay?</summary><p>Yes, optionally. It uses a clearly labeled scenario based on published Kenyan tax and statutory deduction rules around November 2026. It is illustrative, particularly for later CBA years. Your payslip, KRA and pension scheme arrangements control.</p></details>
 <details><summary>Is KSh 18,000 commuter allowance guaranteed immediately?</summary><p>No. The agreement lists a commuter target of KSh 18,000 per month for Grades 5–15, but permits progressive implementation over up to three years for universities currently paying below that rate. Enter the amount you expect your institution to implement.</p></details>
 <details><summary>Are commuter and annual leave arrears included?</summary><p>No. Allowance arrears are excluded because retrospective effective rates and phased implementation need confirmation. Annual leave allowance is shown separately as a once-yearly amount, not added to monthly gross pay.</p></details>
-<details><summary>Why could my arrears be different?</summary><p>Actual entitlement depends on starting notch, increment date, promotions, changes in grade, actual payments, salary already implemented and payroll reconciliation. The reference assumption is not proof of what an employee was paid.</p></details>
+<details><summary>Why does Notch 3 sometimes become Notch 5?</summary><p>Only in historical mode: if your notch was 3 on 30 June 2025 and your increment month is October, the timeline advances to Notch 4 in October 2025 and Notch 5 in October 2026. In quick mode, Notch 3 remains Notch 3. Historical arrears require your correct old notch and actual payslip records.</p></details><details><summary>Why could my arrears be different?</summary><p>Actual entitlement depends on starting notch, increment date, promotions, changes in grade, actual payments, salary already implemented and payroll reconciliation. The reference assumption is not proof of what an employee was paid.</p></details>
 <details><summary>When does the return-to-work agreement say arrears should be paid?</summary><p>It provides for arrears from 1 July 2025 to 30 June 2026 to be paid in three equal instalments without specifying their individual dates, and the arrears from 1 July to 31 December 2026 together with January 2027 salary. Funding and employer implementation must still be confirmed.</p></details>
 <details><summary>Where do the salary figures come from?</summary><p>The 30 October 2026 Return-to-Work Formula between IPUCCF/FKE and KUSU, specifically the salary schedule on pages 9–14 and the allowance schedule on page 8. This independent tool is not an official interpretation of the agreement.</p></details>
 <details><summary>How are promotions and departures treated?</summary><p>A promotion resets the grade and notch from the selected effective month. The chosen increment month continues afterwards, but no separate increment is applied in the same month as the promotion. If you leave, arrears accumulate only through your final month of employment. Promotions may make the previous-year reference comparator unsuitable; enter actual basic pay for accurate comparisons.</p></details><details><summary>Does "first month new salary is paid" change the CBA effective date?</summary><p>No. The CBA schedule is applied from July 2025. The implementation field only estimates when your payslip began reflecting the revised salary and therefore when unpaid basic salary differences stop accumulating. Any actual-pay entries override the assumption.</p></details></div></div>
@@ -553,7 +559,7 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
 </section>
 <section class="bottom-cta"><div class="wrap bottom-inner"><div><div class="overline">READY TO DOUBLE-CHECK?</div><h2>Your payslip is the final check.</h2><p>Use PayLens to prepare your questions, then confirm your numbers with your university and the signed CBA.</p></div><div class="bottom-buttons"><a class="primary-button" href="#estimator">Calculate again →</a><a class="source-link-button" href="./sources/Return-to-Work-Formula-30-Oct-2026.pdf" rel="noopener noreferrer" target="_blank">Read the source PDF ↗</a></div></div></section>
 </main>
-<footer class="site-footer"><div class="wrap footer-grid"><div class="footer-brand"><strong>KUSU PayLens 4.0</strong><p>Independent demonstration for Kenyan public university staff. Not a payroll or official union service.</p></div><div class="footer-note"><strong>Demo · Unofficial estimate.</strong><p>Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. <strong>No entered pay data is transmitted automatically. Sharing via WhatsApp sends only the message you choose.</strong> Validate your entitlement with your employer, payslip and the signed CBA documents.</p></div></div><div class="wrap footer-last"><span>Salary sources: 30 October 2026 Return-to-Work Formula · Schedules I &amp; II</span><span>PayLens · v4.0 · 2 November 2026 · Works offline after installation</span></div><div class="wrap footer-credit"><span>Prepared by</span> <strong>Eng Dan Otieno</strong><span class="footer-role">ICT Expert</span></div></footer>
+<footer class="site-footer"><div class="wrap footer-grid"><div class="footer-brand"><strong>KUSU PayLens 4.1</strong><p>Independent demonstration for Kenyan public university staff. Not a payroll or official union service.</p></div><div class="footer-note"><strong>Demo · Unofficial estimate.</strong><p>Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. <strong>No entered pay data is transmitted automatically. Sharing via WhatsApp sends only the message you choose.</strong> Validate your entitlement with your employer, payslip and the signed CBA documents.</p></div></div><div class="wrap footer-last"><span>Salary sources: 30 October 2026 Return-to-Work Formula · Schedules I &amp; II</span><span>PayLens · v4.1 · 2 November 2026 · Works offline after installation</span></div><div class="wrap footer-credit"><span>Prepared by</span> <strong>Eng Dan Otieno</strong><span class="footer-role">ICT Expert</span></div></footer>
 <nav aria-label="Quick links" class="mobile-dock"><a href="#estimator"><span aria-hidden="true">⌨</span>Calculate</a><a href="#insights"><span aria-hidden="true">◫</span>Results</a><a data-expert-link="" href="#arrears-tracker"><span aria-hidden="true">◷</span>Arrears</a><a href="#member-tools"><span aria-hidden="true">☷</span>More</a></nav>
 <script>const CBA_DATA = {"salary":{"5":{"1":[32485,33622,34799,36017,37278],"2":[33785,35304,36540,37819,39143],"3":[35137,37070,38368,39711,41101],"4":[36543,38924,40287,41698,43158],"5":[38004,40871,42302,43783,45316],"6":[39525,42915,44418,45973,47583],"7":[41106,45061,46639,48272,49962],"8":[42750,47314,48970,50684,52458],"9":[44461,49680,51419,53219,55082],"10":[46239,52164,53990,55880,57836],"11":[48089,54773,56691,58676,60730],"12":[50014,57511,59524,61608,63765]},"6":{"1":[36914,38206,39544,40929,42362],"2":[38392,40117,41522,42976,44481],"3":[39927,42123,43598,45124,46704],"4":[41525,44229,45778,47381,49040],"5":[43186,46441,48067,49750,51492],"6":[44913,48763,50470,52237,54066],"7":[46711,51202,52995,54850,56770],"8":[48580,53763,55645,57593,59609],"9":[50523,56451,58427,60472,62589],"10":[52544,59275,61350,63498,65721],"11":[54647,62239,64418,66673,69007],"12":[56833,65351,67639,70007,72458]},"7":{"1":[42858,44359,45912,47519,49183],"2":[44573,46577,48208,49896,51643],"3":[46357,48906,50618,52390,54224],"4":[48211,51352,53150,55011,56937],"5":[50140,53920,55808,57762,59784],"6":[52147,56616,58598,60649,62772],"7":[54233,59448,61529,63683,65912],"8":[56402,62420,64605,66867,69208],"9":[58660,65542,67836,70211,72669],"10":[61007,68820,71229,73723,76304],"11":[63448,72261,74791,77409,80119],"12":[65986,75874,78530,81279,84124]},"8":{"1":[47621,49288,51014,52800,54648],"2":[49527,51754,53566,55441,57382],"3":[51507,54342,56244,58213,60251],"4":[53568,57060,59058,61126,63266],"5":[55711,59914,62011,64182,66429],"6":[57941,62910,65112,67391,69750],"7":[60259,66056,68368,70761,73238],"8":[62671,69360,71788,74301,76902],"9":[65177,72828,75377,78016,80747],"10":[67785,76470,79147,81918,84786],"11":[70497,80295,83106,86015,89026],"12":[73317,84310,87261,90316,93478]},"9":{"1":[55373,57312,59318,61395,63544],"2":[57588,60177,62284,64464,66721],"3":[59892,63187,65399,67688,70058],"4":[62288,66347,68670,71074,73562],"5":[64779,69665,72104,74628,77240],"6":[67373,73149,75710,78360,81103],"7":[70067,76807,79496,82279,85159],"8":[72870,80648,83471,86393,89417],"9":[75785,84680,87644,90712,93887],"10":[78818,88914,92026,95247,98581],"11":[81971,93361,96629,100012,103513],"12":[85250,98029,101461,105013,108689]},"10":{"1":[63647,65875,68181,70568,73038],"2":[66194,69170,71591,74097,76691],"3":[68843,72629,75172,77804,80528],"4":[71596,76260,78930,81693,84553],"5":[74460,80074,82877,85778,88781],"6":[77439,84079,87022,90068,93221],"7":[80538,88283,91373,94572,97883],"8":[83759,92697,95942,99300,102776],"9":[87110,97333,100740,104266,107916],"10":[90594,102201,105779,109482,113314],"11":[94218,107311,111067,114955,118979],"12":[97988,112678,116622,120704,124929]},"11":{"1":[96006,99367,102845,106445,110171],"2":[99848,104336,107988,111768,115680],"3":[103842,109553,113388,117357,121465],"4":[107996,115031,119058,123226,127539],"5":[112317,120784,125012,129388,133917],"6":[116810,126823,131262,135857,140612],"7":[121482,133165,137826,142650,147643],"8":[126342,139824,144718,149784,155027],"9":[131395,146815,151954,157273,162778],"10":[136653,154157,159553,165138,170918],"11":[142119,161865,167531,173395,179464],"12":[147805,169959,175908,182065,188438]},"12":{"1":[119858,124054,128396,132890,137542],"2":[124653,130256,134815,139534,144418],"3":[129640,136770,141557,146512,151640],"4":[134826,143609,148636,153839,159224],"5":[140220,150790,156068,161531,167185],"6":[145829,158330,163872,169608,175545],"7":[151662,166246,172065,178088,184322],"8":[157729,174559,180669,186993,193538],"9":[164039,183288,189704,196344,203217],"10":[170600,192453,199189,206161,213377],"11":[177425,202076,209149,216470,224047],"12":[184523,212181,219608,227295,235251]},"13":{"1":[136171,140937,145870,150976,156261],"2":[141619,147985,153165,158526,164075],"3":[147284,155384,160823,166452,172278],"4":[153175,163154,168865,174776,180894],"5":[159303,171312,177308,183514,189937],"6":[165676,179877,186173,192690,199435],"7":[172303,188871,195482,202324,209406],"8":[179195,198316,205258,212443,219879],"9":[186365,208232,215521,223065,230873],"10":[193819,218644,226297,234218,242416],"11":[201572,229577,237613,245930,254538],"12":[209636,241056,249493,258226,267264]},"14":{"1":[173864,179950,186249,192768,199515],"2":[180819,188948,195562,202407,209492],"3":[188053,198396,205340,212527,219966],"4":[195574,208316,215608,223155,230966],"5":[203398,218732,226388,234312,242513],"6":[211534,229669,237708,246028,254639],"7":[219995,241153,249594,258330,267372],"8":[228796,253211,262074,271247,280741],"9":[237948,265872,275178,284810,294779],"10":[247467,279167,288938,299051,309518],"11":[257366,293126,303386,314005,324996],"12":[267662,307783,318556,329706,341246]},"15":{"1":[224631,232494,240632,249055,257772],"2":[233616,244119,252664,261508,270661],"3":[242962,256325,265297,274583,284194],"4":[252680,269142,278562,288312,298403],"5":[262789,282599,292490,302728,313324],"6":[273301,296730,307116,317866,328992],"7":[284233,311567,322472,333759,345441],"8":[295604,327145,338596,350447,362713],"9":[307428,343504,355527,367971,380850],"10":[319725,360679,373303,386369,399892],"11":[332515,378714,391969,405688,419888],"12":[345816,397651,411569,425974,440884]}},"leave":{"15":21980,"14":21197,"13":19021,"12":17570,"11":14087,"10":8754,"9":8754,"8":8173,"7":8056,"6":7154,"5":6225}};</script>
 <script>(function () {
@@ -567,7 +573,7 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
   const startMonth = {year:2025,month:7};
   const lastMonth = {year:2029,month:6};
   const trackerIDs=["payment1","payment2","payment3","paymentJan"];
-  const inputKeys=['grade','notch','incrementMonth','estimateMonth','house','other','oldCommuter','newCommuter','oldLeave','paidArrears','implementedMonth','exitMonth','promo1enabled','promo1date','promo1grade','promo1notch','promo2enabled','promo2date','promo2grade','promo2notch','netEnabled','pensionPct','duesPct','otherDeductions','usePaye','useShif','useAhl','useNssf'];
+  const inputKeys=['notchBasis','grade','notch','incrementMonth','estimateMonth','house','other','oldCommuter','newCommuter','oldLeave','paidArrears','implementedMonth','exitMonth','promo1enabled','promo1date','promo1grade','promo1notch','promo2enabled','promo2date','promo2grade','promo2notch','netEnabled','pensionPct','duesPct','otherDeductions','usePaye','useShif','useAhl','useNssf'];
   let lastResult = null;
   const plainNumber = (v) => {const n=Number(v);return Number.isFinite(n)?Math.max(0,n):0};
   function setOptions(id, entries, chosen) {
@@ -592,7 +598,7 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
       date:e['promo'+i+'date'].value,grade:clamp(e['promo'+i+'grade'].value,5,15,8),notch:clamp(e['promo'+i+'notch'].value,1,12,1),order:i
     })).filter(v=>v.date>='2025-07'&&v.date<='2029-06').sort((a,b)=>a.date.localeCompare(b.date)||a.order-b.order);
     return {
-      grade:clamp(e.grade.value,5,15,8),notch:clamp(e.notch.value,1,12,1),
+      notchBasis:e.notchBasis.value==='start'?'start':'current',grade:clamp(e.grade.value,5,15,8),notch:clamp(e.notch.value,1,12,1),
       incrementMonth:clamp(e.incrementMonth.value,1,12,10),
       estimateMonth:e.estimateMonth.value||'2026-11',
       implementedMonth:e.implementedMonth.value||'',exitMonth:e.exitMonth.value||'',
@@ -636,7 +642,18 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
     if(targetMonth<'2025-07')targetMonth='2025-07';
     if(targetMonth>'2029-06')targetMonth='2029-06';
     if(p.exitMonth&&targetMonth>p.exitMonth)targetMonth=p.exitMonth;
-    const selected=timeline.find(r=>r.dateKey===targetMonth&&r.active)||timeline.find(r=>r.active)||timeline[0];
+    let selected=timeline.find(r=>r.dateKey===targetMonth&&r.active)||timeline.find(r=>r.active)||timeline[0];
+    const currentOnly=p.notchBasis==='current';
+    if(currentOnly){
+      const year=Number(targetMonth.slice(0,4)),month=Number(targetMonth.slice(5,7));
+      const fiscalStart=month>=7?year:year-1;
+      const rateIndex=fiscalStart-2024;
+      const rate=CBA_DATA.salary[String(p.grade)][String(p.notch)];
+      const override=actualPay.has(targetMonth)?actualPay.get(targetMonth):null;
+      const newBasic=rate[rateIndex],reference=rate[0];
+      const basicPaid=override===null?reference:override;
+      selected={...selected,year,month,dateKey:targetMonth,yearLabel:`${fiscalStart}/${String(fiscalStart+1).slice(-2)}`,grade:p.grade,notch:p.notch,newBasic,reference,override,basicPaid,difference:newBasic-basicPaid,promoted:false};
+    }
     const first=add(timeline,'2025-07','2026-06');
     const second=add(timeline,'2026-07','2026-12');
     const late=add(timeline,'2027-01','2029-06');
@@ -649,7 +666,7 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
     const gross=selected.newBasic+p.house+p.other+p.newCommuter;
     const leave=CBA_DATA.leave[String(selected.grade)];
     const net=calcNet(gross,selected.newBasic,p);
-    return {p,timeline,selected,first,second,late,asOf,accrued,tracked,paid,projected,total:accrued-paid,gross,leave,net};
+    return {p,timeline,selected,currentOnly,first,second,late,asOf,accrued,tracked,paid,projected,total:accrued-paid,gross,leave,net};
   }
   function calcNet(gross,basic,p){
     const shif=p.useShif?Math.max(300,gross*.0275):0;
@@ -671,6 +688,13 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
     $('gross-result').textContent=currency(gross);
     $('basic-result').textContent=currency(selected.newBasic);
     $('notch-result').textContent=`Grade ${selected.grade} · ${selected.notch}/12`;
+    document.body.classList.toggle('notch-current',r.currentOnly);
+    if(r.currentOnly){
+      $('notch-clarity').textContent=`Quick check: You entered Notch ${p.notch} for ${MONTHS[selected.month-1]} ${selected.year}. We used exactly Notch ${selected.notch}; no extra increments. To calculate arrears, select “My notch on 30 June 2025” in Step 1.`;
+    }else{
+      const moves=r.timeline.filter(row=>row.dateKey<=selected.dateKey&&row.month===p.incrementMonth&&!row.promoted&&row.notch>p.notch).map(row=>`${MONTHS[row.month-1].slice(0,3)} ${row.year}: ${row.notch}`);
+      $('notch-clarity').textContent=`Historical calculation: Notch ${p.notch} on 30 June 2025 → ${moves.length?moves.join(' → '):'no annual increment yet'} → Notch ${selected.notch} in ${MONTHS[selected.month-1]} ${selected.year}. This is a projection, not the notch you entered.`;
+    }
     $('house-result').textContent=currency(p.house);
     $('commuter-result').textContent=currency(p.newCommuter);
     $('other-result').textContent=currency(p.other);
@@ -678,10 +702,10 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
     $('commuter-gain-result').textContent=currency(p.newCommuter-p.oldCommuter);
     $('result-employment').textContent=(p.exitMonth&&p.estimateMonth>p.exitMonth?'Employment ended: showing last month worked. ':'')+
       `Grade ${selected.grade} · Notch ${selected.notch}`+(selected.promoted?' · promotion effective this month':'')+` · Leave allowance difference ${currency(leave-p.oldLeave)} per year, if your previous rate is correct.`;
-    $('arrears-first').textContent=currency(first);
-    $('arrears-second').textContent=currency(second);
-    $('arrears-late').textContent=currency(late);
-    $('arrears-total').textContent=currency(total);
+    $('arrears-first').textContent=r.currentOnly?'Not calculated':currency(first);
+    $('arrears-second').textContent=r.currentOnly?'Not calculated':currency(second);
+    $('arrears-late').textContent=r.currentOnly?'Not calculated':currency(late);
+    $('arrears-total').textContent=r.currentOnly?'Not calculated':currency(total);
     $('net-results').classList.toggle('hidden',!p.netEnabled);
     $('net-result').textContent=currency(net.total);
     $('paye-result').textContent=currency(net.paye);
@@ -715,10 +739,10 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
     const title=$('arrears-total').closest('.arrears-card').querySelector('small');
     if(title) title.textContent='Estimated accrued balance through '+r.asOf;
     const fiscal=selected.yearLabel,inc=r.p.incrementMonth===selected.month?'An increment falls in this month (unless a promotion replaces it).':'Your chosen increment month is '+MONTHS[r.p.incrementMonth-1]+'.';
-    $('math-position').textContent=`${MONTHS[selected.month-1]} ${selected.year}: Grade ${selected.grade}, Notch ${selected.notch}/12 (CBA year ${fiscal}). ${inc}`;
+    $('math-position').textContent=r.currentOnly?`Quick mode: Grade ${selected.grade}, Notch ${selected.notch} in ${MONTHS[selected.month-1]} ${selected.year}. No increment is automatically added to your chosen notch.`:`${MONTHS[selected.month-1]} ${selected.year}: Grade ${selected.grade}, Notch ${selected.notch}/12 (CBA year ${fiscal}). ${inc}`;
     $('math-salary').textContent=`Schedule I: Grade ${selected.grade}, Notch ${selected.notch}, year ${fiscal} = ${currency(selected.newBasic)} basic/month. Same-notch 2024/25 reference: ${currency(selected.reference)}.`;
     $('math-difference').textContent=`${currency(selected.newBasic)} scheduled basic − ${currency(selected.basicPaid)} ${hasActual?'actual entered basic':'assumed paid basic'} = ${delta<0?'−':''}${currency(Math.abs(delta))} this month.`;
-    $('math-arrears').textContent=`Estimated basic differences accrued Jul 2025–${r.asOf}: ${currency(r.accrued)}. Less payments entered: ${currency(r.paid)}. Estimated balance: ${currency(r.total)}. ${currency(r.projected)} of additional future differences are projected separately, NOT accrued arrears.`;
+    $('math-arrears').textContent=r.currentOnly?'Historical arrears are not calculated in quick mode. Change the Step 1 selection to your actual notch at 30 June 2025 and enter your real payroll payments.':`Estimated basic differences accrued Jul 2025–${r.asOf}: ${currency(r.accrued)}. Less payments entered: ${currency(r.paid)}. Estimated balance: ${currency(r.total)}. ${currency(r.projected)} of additional future differences are projected separately, NOT accrued arrears.`;
   }
   // The quick field changes one month only; no upload, saved record, or full payslip required.
   function syncQuick(){
@@ -743,6 +767,7 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
       ['Printed on',new Date().toLocaleDateString('en-KE',{day:'2-digit',month:'long',year:'numeric'})],
       ['Estimated pay month',r.selected.dateKey],
       ['Grade and notch',`Grade ${r.selected.grade}, Notch ${r.selected.notch}`],
+      ['Notch basis',r.currentOnly?'Current notch in the selected month':'Historical starting notch on 30 June 2025'],
       ['Increment month',MONTHS[r.p.incrementMonth-1]],
       ['Scheduled basic salary',currency(r.selected.newBasic)],
       ['Basic salary used as paid',currency(r.selected.basicPaid)+(r.selected.override===null?' (assumed)':' (entered)')],
@@ -758,6 +783,7 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
       ['Estimated accrued balance',currency(r.total)],
       ['Additional future scenario differences',currency(r.projected)],
     ];
+    if(r.currentOnly){const i=rows.findIndex(row=>row[0]==='Increment month');if(i>=0)rows.splice(i,1);const first=rows.findIndex(row=>row[0]==='First 12-month period estimate');rows.splice(first);rows.push(['Arrears','Not calculated — need 30 June 2025 notch and payslips']);}
     const tbody=$('print-metrics-body');tbody.replaceChildren();
     rows.forEach(([k,v])=>{let tr=document.createElement('tr'),a=document.createElement('th'),b=document.createElement('td');a.textContent=k;b.textContent=v;tr.append(a,b);tbody.appendChild(tr)});
     $('print-method').textContent=$('math-position').textContent+' '+$('math-salary').textContent+' '+$('math-difference').textContent;
@@ -766,10 +792,10 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
   $('shareSafe').addEventListener('click',()=>{
     const r=lastResult;if(!r)return;
     const figures=$('shareFigures').checked;
-    const title='KUSU PayLens 4.0 — 2025–2029 CBA estimate (unofficial demo).';
+    const title='KUSU PayLens 4.1 — 2025–2029 CBA estimate (unofficial demo).';
     const publicLink=/^https?:$/.test(location.protocol)?location.href.split('#')[0]:'';
     let msg=title+'\nAn independent tool to explore KUSU CBA basic pay and possible arrears. Please verify with your university, payslip and the signed CBA.';
-    if(figures){msg+=`\nMy selected month: ${r.selected.dateKey}; Grade ${r.selected.grade}, Notch ${r.selected.notch}. Scheduled gross ${currency(r.gross)}; illustrative accrued basic arrears balance ${currency(r.total)}.`;}
+    if(figures){msg+=`\nMy selected month: ${r.selected.dateKey}; Grade ${r.selected.grade}, Notch ${r.selected.notch}. Scheduled gross ${currency(r.gross)}.`+(r.currentOnly?' Historical arrears not calculated.':` Illustrative accrued basic arrears balance ${currency(r.total)}.`);}
     if(publicLink)msg+='\n'+publicLink;
     msg+='\nPrepared by Eng Dan Otieno | ICT Expert';
     window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank','noopener,noreferrer');
@@ -846,19 +872,29 @@ body.is-expert .wizard{border-bottom:1px solid #e9edf7;margin-bottom:14px}
   inputKeys.forEach(id=>$(id).addEventListener('input',()=>{
     if(id==='grade')$('scheduleGrade').value=$('grade').value;
     update();
-    if(['grade','notch','incrementMonth','estimateMonth','exitMonth','promo1enabled','promo1date','promo1grade','promo1notch','promo2enabled','promo2date','promo2grade','promo2notch'].includes(id))syncQuick();
+    if(['notchBasis','grade','notch','incrementMonth','estimateMonth','exitMonth','promo1enabled','promo1date','promo1grade','promo1notch','promo2enabled','promo2date','promo2grade','promo2notch'].includes(id))syncQuick();
   }));
   $('estimator-form').addEventListener('submit',event=>event.preventDefault());
   $('scheduleGrade').addEventListener('change',update);
   $('timelineFilter').addEventListener('change',update);
   $('reset').addEventListener('click',()=>{
-    const defaults={grade:8,notch:1,incrementMonth:10,estimateMonth:'2026-11',implementedMonth:'2027-01',exitMonth:'',promo1date:'2026-01',promo1grade:9,promo1notch:1,promo2date:'2027-01',promo2grade:10,promo2notch:1,house:0,other:0,oldCommuter:0,newCommuter:18000,oldLeave:0,paidArrears:0,pensionPct:0,duesPct:0,otherDeductions:0};
+    const defaults={notchBasis:'current',grade:8,notch:1,incrementMonth:10,estimateMonth:'2026-11',implementedMonth:'2027-01',exitMonth:'',promo1date:'2026-01',promo1grade:9,promo1notch:1,promo2date:'2027-01',promo2grade:10,promo2notch:1,house:0,other:0,oldCommuter:0,newCommuter:18000,oldLeave:0,paidArrears:0,pensionPct:0,duesPct:0,otherDeductions:0};
     Object.keys(defaults).forEach(k=>$(k).value=defaults[k]);for(const id of ['promo1enabled','promo2enabled','netEnabled','useNssf'])$(id).checked=false;for(const id of ['usePaye','useShif','useAhl'])$(id).checked=true;
     actualPay.clear();trackerIDs.forEach(k=>$(k).value="");$("quickBasic").value="";$("shareFigures").checked=false;$('timelineFilter').value='arrears';$('scheduleGrade').value='8';update();
   });
   $('clearActual').addEventListener('click',()=>{actualPay.clear();update();syncQuick()});
   function buildSummary(r){
     const p=r.p;
+    if(r.currentOnly) return `KUSU PayLens 4.1 — QUICK MONTHLY LOOKUP
+Demo · Unofficial estimate. Not an official payroll calculation.
+Your entered notch ${p.notch} is used directly for ${r.selected.dateKey} (no annual increments added).
+Grade ${r.selected.grade}, Notch ${r.selected.notch}
+Scheduled basic salary: ${currency(r.selected.newBasic)}
+Estimated gross including entered allowances: ${currency(r.gross)}
+Historical arrears: Not calculated. Historical notch and actual payslip data required.
+Verify against the signed CBA and your employer.
+Prepared by Eng Dan Otieno | ICT Expert`;
+
     return `KUSU 2025–2029 CBA PAY ESTIMATOR
 Demo · Unofficial estimate.
 Not certified or endorsed by KUSU, IPUCCF, the Ministry, KRA or any other body. No entered pay data is transmitted automatically. Sharing is optional. Validate with your employer, payslip and signed CBA.
@@ -951,7 +987,7 @@ Estimates only. Allowance arrears and tax on arrears excluded.`;
 })();
 </script>
 <section aria-label="Personal estimate report" class="print-report" id="print-report">
-<header class="print-head"><div><strong>KUSU PayLens 4.0</strong><h1>Personal CBA pay estimate</h1><p>Independent, unofficial salary and arrears illustration</p></div><span>DEMO · UNOFFICIAL</span></header>
+<header class="print-head"><div><strong>KUSU PayLens 4.1</strong><h1>Personal CBA pay estimate</h1><p>Independent, unofficial salary and arrears illustration</p></div><span>DEMO · UNOFFICIAL</span></header>
 <div class="print-alert"><b>Demo · Unofficial estimate.</b> Not certified or endorsed by KUSU, IPUCCF, the Ministry, the Kenya Revenue Authority (KRA) or any other body. Validate your entitlement with your employer, payslip and the signed CBA documents.</div>
 <table class="print-metrics"><tbody id="print-metrics-body"></tbody></table>
 <h2>Calculation explanation</h2><p id="print-method"></p>
@@ -1000,6 +1036,17 @@ Estimates only. Allowance arrears and tax on arrears excluded.`;
   const dots=[...document.querySelectorAll('.wizard-dot')];
   const allExpert=[...document.querySelectorAll('[data-expert-link]')];
   let mode='simple',step=1;
+  function refreshBasisHelp(){
+    const isStart=$('notchBasis').value==='start';
+    $('notch-field-label').textContent=isStart?'Starting notch · 30 June 2025':'My notch in the selected month';
+    $('wizard-basis-help').innerHTML=isStart?'For an arrears projection, enter your grade and <strong>notch as at 30 June 2025</strong>. The model then applies subsequent increments.':'Choose the <strong>notch you currently hold</strong> (or held in the month you are checking). Quick mode will NOT add extra notches.';
+    $('notch-basis-note').textContent=isStart?'Historical mode: Notch 3 at 30 June 2025 with October increments becomes Notch 4 in October 2025 and Notch 5 in October 2026.':'Quick mode: selecting Notch 3 gives the salary for Notch 3, without adding future notches. Arrears need a historical starting notch.';
+    document.querySelector('[data-step="2"] small').textContent=isStart?'My increment':'My pay month';
+    $('step2-basis-help').textContent=isStart?'Choose your annual increment month and the month you want to check. The model advances the starting notch accordingly.':'Choose the salary month to check. This quick lookup uses the exact selected notch with no added increments.';
+    $('step2-progress-help').textContent=isStart?'Each increment month moves the starting notch up once (maximum Notch 12); July changes the CBA column.':'No automatic increments are added in quick mode. Switch to historical mode in Step 1 to model progression and arrears.';
+  }
+  $('notchBasis').addEventListener('change',()=>{refreshBasisHelp();if(step===3)applyWizard(3);});
+  refreshBasisHelp();
   function applyWizard(next,{focus=false}={}){
     step=Math.max(1,Math.min(3,Number(next)||1));
     panes.forEach(p=>{p.hidden=Number(p.dataset.pane)!==step;});
@@ -1013,7 +1060,7 @@ Estimates only. Allowance arrears and tax on arrears excluded.`;
     $('estimate-card').querySelector('.result-kicker').textContent= step===3 ? 'YOUR CBA PAY ESTIMATE · DEMO' : 'LIVE EXAMPLE · CHOOSE YOUR DETAILS FIRST';
     if(step===3){
       const grade=$('grade').value, notch=$('notch').value, inc=$('incrementMonth');
-      $('wizard-summary').textContent=`Grade ${grade}, starting Notch ${notch} · ${inc.selectedOptions[0].text} increment · Estimated month ${$('estimateMonth').value}.`;
+      $('wizard-summary').textContent=$('notchBasis').value==='current'?`Grade ${grade}, Notch ${notch} used directly for ${$('estimateMonth').value} · No extra notches added · Arrears not calculated.`:`Grade ${grade}, starting Notch ${notch} on 30 June 2025 · ${inc.selectedOptions[0].text} increments · Result shown for ${$('estimateMonth').value}.`;
     }
     if(focus && mode==='simple'){
       const title=panes[step-1].querySelector('h4');title.setAttribute('tabindex','-1');title.focus({preventScroll:true});
@@ -1037,7 +1084,7 @@ Estimates only. Allowance arrears and tax on arrears excluded.`;
     }
   }));
   dots.forEach(b=>b.addEventListener('click',()=>applyWizard(b.dataset.step,{focus:true})));
-  for(const id of ['grade','notch','incrementMonth','estimateMonth']){
+  for(const id of ['notchBasis','grade','notch','incrementMonth','estimateMonth']){
     $(id).addEventListener('change',()=>{if(step===3)applyWizard(3);});
   }
   allExpert.forEach(a=>a.addEventListener('click',()=>setMode('expert')));

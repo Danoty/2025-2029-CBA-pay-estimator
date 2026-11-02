@@ -1,4 +1,4 @@
-# KUSU PayLens 4.0 — A simpler way to explore CBA pay
+# KUSU PayLens 4.1 — A simpler way to explore CBA pay
 
 **Prepared by Eng Dan Otieno | ICT Expert**  
 **DEMO · UNOFFICIAL ESTIMATE** — Not certified or endorsed by KUSU, IPUCCF, the Ministry, KRA or another body.
@@ -31,3 +31,8 @@ The site includes a copy of the signed agreement in `sources/` so members can cr
 - `sources/Return-to-Work-Formula-30-Oct-2026.pdf`: reference source document, not evidence of endorsement.
 
 For a quick local preview, open `index.html` in a browser. For service-worker/offline testing, serve via HTTPS or localhost.
+
+
+## v4.1 notch selection correction
+
+Quick mode (default): enter the grade and notch for the selected pay month. The calculator uses that notch exactly. It does not calculate historical arrears. Historical mode: enter the grade and notch at 30 June 2025, plus the increment month; the model advances notches in each subsequent increment month for the monthly CBA and arrears scenario. Example: starting notch 3 in June 2025, October increments result in notch 4 in October 2025 and notch 5 in October 2026. Do not confuse the resulting projected notch with the notch originally entered.
